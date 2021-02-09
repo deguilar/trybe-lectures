@@ -4,7 +4,7 @@ Este repositório armazena os códigos e scripts fornecidos durante as aulas ao 
 
 ## Começando
 
-Basta clonar o repositorio
+Basta clonar o repositório
 
 ```sh
 git clone git@github.com:tryber/sd-10a-live-lectures.git
