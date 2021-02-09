@@ -21,6 +21,6 @@ git checkout nome-branch-aula-ao-vivo
 
 ### Estrutura
 
-Todo conteúdo dado em aulas estará no seu respectivo Pull Request!
+Todos os conteúdos dados em aulas estarão no seu respectivo Pull Request!
 
 ---
