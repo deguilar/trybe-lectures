@@ -29,6 +29,7 @@ p, li {
   line-height: 42px;
   font-weight: 600;
   font-size: 28px;
+  margin-bottom: 50px;
 }
 
 .testimonial-phrase {
@@ -55,4 +56,22 @@ p, li {
 
 .stronger-text {
   font-weight: 600;
+}
+
+#market {
+  padding: 40px;
+  text-align: center;
+}
+
+#student-testimonial {
+  margin-top: 50px;
+}
+
+.student-testimonial-container {
+  width: 300px;
+  display: inline-block;
+}
+
+.circled {
+  border-radius: 100%;
 }
