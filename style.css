@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+p, li {
+  color: #475550;
+  font-size: 16px;
+}
+
+.trybe-green {
+  color: rgb(17, 163, 106);
+}
+
+#main-title {
+  color: #0a7e51;
+  line-height: 55px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  font-size: 45px;
+  margin-bottom: 60px;
+}
+
+.section-title {
+  line-height: 42px;
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.testimonial-phrase {
+  font-size: 14px;
+}
+
+.testimonial-name {
+  line-height: 20px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+#header {
+  background-image: url("images/smiling-image.jpg");
+  background-size: cover;
+  background-position: 50% 25%;
+  padding: 60px 30px 40px;
+}
+
+#header-content {
+  max-width: 660px;
+  margin-left: 100px;
+}
+
+.stronger-text {
+  font-weight: 600;
+}
