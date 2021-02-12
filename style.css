@@ -72,6 +72,18 @@ p, li {
   display: inline-block;
 }
 
-.circled {
+.student-testimonial-container img {
   border-radius: 100%;
+}
+
+#learning {
+  margin: 100px 100px;
+}
+
+#learning-left-div {
+  float: left;
+}
+
+#learning-right-div {
+  float: right;
 }
