@@ -66,3 +66,7 @@ for (let index = 0; index < daysList.length; index += 1) {
 function changeColor(elements, color){
   document.querySelector(elements).style.backgroundColor = color;
 };
+
+
+changeColor('.month-container', 'blue');
+changeColor('#btn-holiday', 'blue');
