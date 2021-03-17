@@ -13,6 +13,17 @@
 }
 
 .menu {
-  border: 1px solid #fff;
   width: 400px;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login {
+  margin-left: 20px;
 }
