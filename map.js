@@ -34,3 +34,42 @@ const cities = [
 // a) "${nomeDaCidade} - ${siglaDoEstado}"
 console.log("Formato: ${nomeDaCidade} - ${siglaDoEstado}");
 console.log('-------------------------------------------------------------');
+
+const citiesAndStates = cities.map((city) => {
+  return `${city.name} - ${city.state}`;
+});
+
+console.log(citiesAndStates);
+
+// b) "A cidade de ${nomeDaCidade} fica no estado de ${nomeDoEstado}"
+console.log("Formato: A cidade de ${nomeDaCidade} fica no estado de ${nomeDoEstado}");
+console.log('-------------------------------------------------------------');
+
+const citiesAndStatesNames = cities.map((city) => {
+  const findState = states.find((state) => city.state === state.short );
+  return `A cidade de ${city.name} fica no estado de ${findState.name}`;
+});
+
+console.log(citiesAndStatesNames);
+
+// 3. Transforme o array de objeto cities em um array de objetos do seguinte formado:
+// {
+//   state: "Amazonas",
+//   city: "Manaus",
+//   region: "Norte"
+// }
+
+console.log('-------------------------------------------------------------');
+
+const arrayCities = cities.map((city) => {
+  const findState = states.find((state) => city.state === state.short);
+  const findRegion = regions.find((region) => city.region === region.short);
+
+  return {
+    "state": findState.name,
+    "city": city.name,
+    "region": findRegion.name
+  }
+});
+
+console.log(arrayCities);
