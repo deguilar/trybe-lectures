@@ -8,7 +8,7 @@ printPointCoordinates = (x, y, z) => `Point coordinates are x = ${x}, y = ${y} a
 
 //TESTES
 const expectedValuesPoint = 'Point coordinates are x = 1, y = 2.2 and z = -6.6';
-assert.strictEqual(printPointCoordinates(point[0], point[1], point[2]), expectedValuesPoint);
+assert.strictEqual(printPointCoordinates(...point), expectedValuesPoint);
 
 const expectedValuesOtherPoint = 'Point coordinates are x = 0.1, y = 3.5 and z = -99.6';
-assert.strictEqual(printPointCoordinates(otherPoint[0], otherPoint[1], otherPoint[2]), expectedValuesOtherPoint);
+assert.strictEqual(printPointCoordinates(...otherPoint), expectedValuesOtherPoint);

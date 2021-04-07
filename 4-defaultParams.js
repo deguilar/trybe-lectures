@@ -1,4 +1,4 @@
-const saudacoes = (saudacao) => {
+const saudacoes = (saudacao = 'pessoa') => {
   console.log(`Olá, ${saudacao}!`);
 };
 

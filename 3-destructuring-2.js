@@ -29,8 +29,9 @@ const polarBear = {
   }
 };
 
-const animalDescription = (animal) => {
-  return `${animal.commonName} (${animal.name}) weighs around ${animal.weightRange.min}-${animal.weightRange.max} ${animal.weightRange.measurementUnit}`;
+const animalDescription = ({ commonName, name, weightRange }) => {
+  const { min, max, measurementUnit = 'kg' } = weightRange;
+  return `${commonName} (${name}) weighs around ${min}-${max} ${measurementUnit}`;
 };
 
 const expectedValueLion = 'Lion (Panthera leo) weighs around 186.55-225 kg';

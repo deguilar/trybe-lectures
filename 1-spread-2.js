@@ -15,8 +15,10 @@ for (let index = 0; index < scifiBooks.length; index += 1) {
 }
 
 // UTILIZANDO O SPREAD OPERATOR
-
+const books = [...horrorBooks, ...scifiBooks]
+// console.log(books);
 
 //TESTES
 const expectedValue = ['It', 'The Shining', 'I, Robot', 'Caves of Steel', 'The End of Eternity'];
 assert.deepStrictEqual(awesomeBooks, expectedValue);
+assert.deepStrictEqual(books, expectedValue);
