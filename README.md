@@ -12,6 +12,40 @@
 - Utilizar o ReactDOM.render para renderizar elementos numa página web.
 - Utilizar o import para usar código externo junto ao seu.
 
+# Aula
+
+Ideia geral é apresentar o React e a forma como se cria componentes a partir de funcoes e de classes
+
+- npx (dizer que ele so roda o programa, não instala)
+- erros terminal
+- rodar o npm start
+- duvidas ?
+- package.json
+- node_modules
+- src
+- index.js
+- App.js
+- duvidas ?
+- Hello World
+- JSX
+- duvidas ?
+- renderizar o componente
+  - criar mais tags dentro da App.js
+  - separar em uma funcao 
+  - chamar dentro do App
+  - duvidas ?
+  - criar um arquivo para este novo componente
+  - chamar dentro do App
+  - duvidas ?
+- import e export
+- criar outro componente
+- import dentro da App.js
+- explicar ReactDOM.render
+- class component
+- class component
+- componente dentro do outro
+
+
 # Ecossistema React
 
 - React
@@ -62,20 +96,3 @@
 - Como importar e exportar usando import
   - export default myFunction
   - import myVariable from "./caminho-do-arquivo"
-
-# Aula
-
-Ideia geral é apresentar o React e a forma como se cria componentes a partir de funcoes e de classes
-
-- iniciar um projeto com o create-react-app
-- mostrar o app rodando
-- explicar JSX e como usar JS dentro dele
-- explicar o ReactDOM.render
-- renderizar o componente
-  - criar mais tags dentro da App.js
-  - transforma essas tags numa funcao que export elas
-  - chamar dentro do App
-  - criar um arquivo para este novo componente
-- explicar o import e export
-- criar um componente usando class
-- renderizar componente componente dentro do outro
