@@ -2,9 +2,9 @@
 
 ## Objetivos da aula
 
-- Criando componentes que recebem parametros (props)
-- Composicao de componentes
-- Criar listas de componentes (map)
+- Como passar parâmetros para os nossos componentes (props)
+- Criar e reutilizar (composição) nossos componentes
+- Criar vários componentes a partir de uma lista de dados (map)
 
 `obs: Não iremos abordar PropsType, esse conteudo sera visto atraves de um video que sera enviado no slack da turma`
 
@@ -13,7 +13,7 @@
 React é uma biblioteca para criar componentes, ou seja, criar uma funcao ou classe que retorna um JSX.
 Todos esses componentes sao renderizados (colocados) no navegador pelo `ReactDOM.render`
 
-## Criando componentes que recebem parametros (props)
+## Como passar parâmetros para os nossos componentes (props)
 
 ### Criando componentes
 - Podemos criar um componente com `function` ou com `class`. Para esse momento do curso eles nao possuem nenhuma diferenca.
@@ -150,7 +150,7 @@ function Pessoa(props) {
 export default Pessoa
 ```
 
-## Passando tipos complexos (objetos)
+### Passando tipos complexos (objetos)
 
 - Vimos que podemos passar `string` e `number` como parametros
 - Porem podemos passar tipos complexos tambem como `object` e `arrays`
@@ -190,7 +190,7 @@ function Pessoa(props) {
 export default Pessoa
 ```
 
-## Composicao de componentes
+## Criar e reutilizar (composição) nossos componentes
 
 No exemplo anterior criamos um componente `Pessoa`, porem pessoa uma foto de perfil, porem e seu eu criar um outro componente que tenha uma foto de perfil tambem?
 
@@ -253,7 +253,7 @@ function Pessoa(props) {
 export default Pessoa
 ```
 
-## Criar listas de componentes (map)
+## Criar vários componentes a partir de uma lista de dados (map)
 
 - Imagine que eu tenha que criar uma aplicacao que exibe os funcionarios de uma empresa
   - Para cada funcionario eu devo criar um codigo dentro da `App.js` por exemplo
