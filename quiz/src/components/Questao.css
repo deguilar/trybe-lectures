@@ -1,0 +1,28 @@
+.questao {
+  background-color: #3d4760;
+  width: 30rem;
+  color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 3px 1px 10px 1px black;
+  margin-bottom: 2rem;
+}
+
+.questao ul {
+ list-style: none;
+ padding: 0;
+}
+
+.questao li {
+  font-weight: bold;
+  border: 1px solid lightgray;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 5px;
+ }
+
+ .questao li:hover {
+  background-color: white;
+  color: purple;
+  cursor: pointer;
+ }

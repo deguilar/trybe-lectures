@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 import "./Titulo.css"
 
-class Titulo extends Component {
+class Titulo extends React.Component {
   render() {
     return (
       <h1 className="titulo">{this.props.titulo}</h1>
