@@ -1,0 +1,10 @@
+.qtd-func {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.qtd-func span {
+  color: purple;
+  font-weight: bold;
+}
