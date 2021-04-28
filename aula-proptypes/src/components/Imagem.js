@@ -1,7 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import './Imagem.css'
 
-export default class Imagem extends React.Component {
+class Imagem extends React.Component {
   render() {
     const { imagem, alt } = this.props
 
@@ -10,3 +11,10 @@ export default class Imagem extends React.Component {
     )
   }
 }
+
+Imagem.propTypes = {
+  imagem: PropTypes.string,
+  alt: PropTypes.string,
+};
+
+export default Imagem

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import './ContadorFuncionarios.css'
 
 class ContadorFuncionarios extends React.Component {
@@ -12,5 +13,9 @@ class ContadorFuncionarios extends React.Component {
     )
   }
 }
+
+ContadorFuncionarios.propTypes = {
+  numero: PropTypes.number
+};
 
 export default ContadorFuncionarios

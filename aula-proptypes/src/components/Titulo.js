@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import "./Titulo.css"
 
 class Titulo extends React.Component {
@@ -11,7 +12,10 @@ class Titulo extends React.Component {
       </h1>
     )
   }
-
 }
+
+Titulo.propTypes = {
+  titulo: PropTypes.string
+};
 
 export default Titulo

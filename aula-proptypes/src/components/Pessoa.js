@@ -1,8 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import Imagem from './Imagem'
 import "./Pessoa.css"
 
-class Pessoas extends React.Component {
+class Pessoa extends React.Component {
   render() {
     const { pessoa } = this.props
 
@@ -16,7 +17,15 @@ class Pessoas extends React.Component {
       </section>
     )
   }
-
 }
 
-export default Pessoas
+Pessoa.propTypes = {
+  pessoa: PropTypes.shape({
+    nome: PropTypes.string,
+    idade: PropTypes.number,
+    descricao: PropTypes.string,
+    foto: PropTypes.string,
+  })
+};
+
+export default Pessoa
