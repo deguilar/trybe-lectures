@@ -43,7 +43,7 @@ class App extends React.Component {
         <button onClick={this.filtraTudo}>Filtrar</button>
 
         <ul>
-          {inputColor.map((cor) => <li style={{ color: cor.value }} >{cor.color}</li>)}
+          {inputColor.map((cor) => <li key={cor.value} style={{ color: cor.value }} >{cor.color}</li>)}
         </ul>
 
         <h1>{this.state.color}</h1>
