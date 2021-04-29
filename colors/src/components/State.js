@@ -20,7 +20,7 @@ class State extends React.Component {
   render() {
     return (
       <section className="search">
-        <input type="text" onChange={(evento) => this.mostrarTextDigitado(evento)} />
+        <input type="text" onChange={(event) => this.mostrarTextDigitado(event)} />
         <p>Text digitado: {this.state.texto}</p>
       </section>
     );

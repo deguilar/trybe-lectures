@@ -1,5 +1,6 @@
 import React from 'react'
 import "./App.css"
+import State from "./components/State"
 
 import cores from "./data"
 class App extends React.Component {
@@ -24,23 +25,7 @@ class App extends React.Component {
 
     return (
       <main>
-        <section className="container-colors">
-          <input
-            type="text"
-            placeholder="Digite o nome de uma cor"
-            onChange={this.manipulaTextoFiltro}
-          />
-
-          <ul className="colors">
-            {coresFiltradas.map(cor => {
-              return (
-                <li key={cor.value} style={{ color: cor.color }} >
-                  {cor.color}
-                </li>
-              )}
-            )}
-          </ul>
-        </section>
+        <State />
 
       </main>
     );
