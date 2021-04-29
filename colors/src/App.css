@@ -1,3 +1,7 @@
+.container-colors {
+  border: 1px solid lightgray;
+  margin: 5rem 2rem
+}
+
 .colors {
-  color: red
 }

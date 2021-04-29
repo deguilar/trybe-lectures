@@ -22,8 +22,8 @@ class Eventos extends React.Component {
   render() {
     return (
       <section className="search">
-        <input onChange={(evento) => this.mostrarTextDigitado(evento)} />
-        <button onClick={() => this.mostrarAlerta()} >Pesquisar</button>
+        <input type="text" onChange={(evento) => this.mostrarTextDigitado(evento)} />
+        <button type="button" onClick={() => this.mostrarAlerta()} >Pesquisar</button>
       </section>
     );
   }
