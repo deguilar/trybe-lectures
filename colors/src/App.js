@@ -1,4 +1,5 @@
 import React from 'react'
+import Eventos from './components/Eventos'
 import TituloDaPagina from './components/TituloDaPagina'
 
 class App extends React.Component {
@@ -6,6 +7,7 @@ class App extends React.Component {
     return (
       <main>
         <TituloDaPagina />
+        <Eventos />
       </main>
     );
   }
