@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Input from './components/Input';
 
 class App extends React.Component {
 
@@ -10,6 +11,7 @@ class App extends React.Component {
       name: '',
       password: '',
       email: '',
+      terms: true,
       errorName: '',
       errorPassword: '',
       errorEmail: ''
@@ -18,20 +20,47 @@ class App extends React.Component {
 
   handleValue = (event) => {
     const { target: { value, name } } = event
-    let newErrorName = ''
+    let errorName = '', errorPassword = '', errorEmail = '';
 
-    if(name === 'name' && name.length > 10) {
-      newErrorName = "Nome deve ser menor que 10";
-      this.setState({ ...this.state, errorName: newErrorName })
-      return;
+    if(name === 'name' && value.length > 10) {
+      errorName = "Nome deve ser menor que 10";
     }
 
-    this.setState({ ...this.state, [name]: value })
+    if(name === 'password' && value === '12345') {
+      errorPassword = "Senha fácil demais";
+    }
+
+    if(name === 'email' && !value.includes('@')) {
+      errorEmail = "email inválido";
+    }
+
+    this.setState({
+      errorName,
+      errorPassword,
+      errorEmail,
+      [name]: value
+    })
+  }
+
+  handleCheck = (event) => {
+    this.setState({ terms: event.target.checked })
   }
 
   handleSubmit = (event) => {
     event.preventDefault();
-    alert(`Nome: ${this.state.name}`)
+
+    if(this.state.errorName === "" && this.state.errorName === "" && this.state.errorName === "" ) {
+      const cadastroPessoa = {
+        name: this.state.name,
+        password: this.state.password,
+        email: this.state.email,
+        terms: this.state.terms,
+      }
+      console.log(cadastroPessoa)
+      alert(`Pessoa ${this.state.name} cadastrada com sucesso`);
+
+    }
+
   }
 
   render() {
@@ -42,16 +71,12 @@ class App extends React.Component {
           <h1>Cadastro</h1>
           <form onSubmit={this.handleSubmit}>
 
-            <div className="input-group">
-              <label>Nome</label>
-              <input
-                type="text"
-                onChange={this.handleValue}
-                value={this.state.name}
-                name="name"
-              />
-              <span>{this.state.errorName}</span>
-            </div>
+            <Input
+              name="name"
+              value={this.state.name}
+              error={this.state.errorName}
+              handleChange={this.handleValue}
+            />
 
             <div className="input-group">
               <label>Email</label>
@@ -60,7 +85,7 @@ class App extends React.Component {
                 onChange={this.handleValue}
                 name="email"
               />
-              <span></span>
+              <span>{this.state.errorEmail}</span>
             </div>
 
             <div className="input-group">
@@ -70,7 +95,17 @@ class App extends React.Component {
                 onChange={this.handleValue}
                 name="password"
               />
-              <span></span>
+              <span>{this.state.errorPassword}</span>
+            </div>
+
+            <div className="input-group input-check">
+              <label>Aceita os termos?</label>
+              <input
+                type="checkbox"
+                name="terms"
+                checked={this.state.terms}
+                onChange={this.handleCheck}
+              />
             </div>
 
             <button type="submit">Cadastrar</button>
