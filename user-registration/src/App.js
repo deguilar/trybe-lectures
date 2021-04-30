@@ -12,32 +12,35 @@ class App extends React.Component {
       password: '',
       email: '',
       terms: false,
-      errorName: '',
-      errorPassword: '',
-      errorEmail: ''
+      errors: {
+        name: '',
+        password: '',
+        email: ''
+      }
     }
   }
 
   handleValue = (event) => {
     const { target: { value, name } } = event
-    let errorName = '', errorPassword = '', errorEmail = '';
+    let newError = '';
 
     if(name === 'name' && value.length > 10) {
-      errorName = "Nome deve ser menor que 10";
+      newError = "Nome deve ser menor que 10";
     }
 
     if(name === 'password' && value === '12345') {
-      errorPassword = "Senha fácil demais";
+      newError = "Senha fácil demais";
     }
 
     if(name === 'email' && !value.includes('@')) {
-      errorEmail = "email inválido";
+      newError = "email inválido";
     }
 
     this.setState({
-      errorName,
-      errorPassword,
-      errorEmail,
+      errors: {
+        ...this.state.errors,
+        [name]: newError
+      },
       [name]: value
     })
   }
@@ -49,7 +52,9 @@ class App extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
 
-    if(this.state.errorName === "" && this.state.errorName === "" && this.state.errorName === "" ) {
+    const { name, password, email } = this.state.errors
+
+    if(name === "" && password === "" && email === "" ) {
       const cadastroPessoa = {
         name: this.state.name,
         password: this.state.password,
@@ -80,7 +85,7 @@ class App extends React.Component {
             <Input
               name="name"
               value={this.state.name}
-              error={this.state.errorName}
+              error={this.state.errors.name}
               handleChange={this.handleValue}
             />
 
@@ -92,7 +97,7 @@ class App extends React.Component {
                 name="email"
                 value={this.state.email}
               />
-              <span>{this.state.errorEmail}</span>
+              <span>{this.state.errors.email}</span>
             </div>
 
             <div className="input-group">
@@ -103,7 +108,7 @@ class App extends React.Component {
                 name="password"
                 value={this.state.password}
               />
-              <span>{this.state.errorPassword}</span>
+              <span>{this.state.errors.password}</span>
             </div>
 
             <div className="input-group input-check">
