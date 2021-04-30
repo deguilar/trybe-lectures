@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+:root {
+  --purple-color: #5723ad
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  align-items: center;
+  background-color: #f5f6f7;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-user {
+  align-items: center;
+  background-color: #fff;
+  border: 0.5px solid lightgray;
+  border-radius: 0.5rem;
+  box-shadow: -5px 5px 10px #dcd2e0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  min-height: 10rem;
+  padding: 2rem;
+  text-align: center;
+  width: 10rem;
+}
+
+.form-user h1 {
+  font-size: 1rem;
+  color: var(--purple-color);
+}
+
+.form-user form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.input-group input {
+  border: 0.5px solid lightgray;
+  border-radius: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0.2rem;
+  padding-bottom: 0.3rem;
+  width: 95%;
+}
+
+.input-group input:hover {
+  border-color: var(--purple-color);
+}
+
+.input-group input:focus-visible {
+  outline-color: var(--purple-color);
+}
+
+.input-group label {
+  text-align: left;
+}
+
+.input-group span {
+  color: red;
+  font-size: 0.5rem;
+}
+
+.form-user button {
+  background-color: var(--purple-color);
+  border: none;
+  border-radius: 0.2rem;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-size: 0.5rem;
+  padding: 0.4rem 0;
+  width: 100%;
 }
