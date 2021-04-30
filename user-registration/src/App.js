@@ -11,7 +11,7 @@ class App extends React.Component {
       name: '',
       password: '',
       email: '',
-      terms: true,
+      terms: false,
       errorName: '',
       errorPassword: '',
       errorEmail: ''
@@ -59,6 +59,12 @@ class App extends React.Component {
       console.log(cadastroPessoa)
       alert(`Pessoa ${this.state.name} cadastrada com sucesso`);
 
+      this.setState({
+        name: '',
+        password: '',
+        email: '',
+        terms: false,
+      })
     }
 
   }
@@ -84,6 +90,7 @@ class App extends React.Component {
                 type="text"
                 onChange={this.handleValue}
                 name="email"
+                value={this.state.email}
               />
               <span>{this.state.errorEmail}</span>
             </div>
@@ -94,6 +101,7 @@ class App extends React.Component {
                 type="password"
                 onChange={this.handleValue}
                 name="password"
+                value={this.state.password}
               />
               <span>{this.state.errorPassword}</span>
             </div>
