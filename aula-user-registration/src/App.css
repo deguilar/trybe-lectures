@@ -61,11 +61,17 @@
 
 .input-group label {
   text-align: left;
+  width: 100%;
 }
 
 .input-group span {
   color: red;
   font-size: 0.5rem;
+}
+
+.input-check {
+  display: flex;
+  justify-content: space-between;
 }
 
 .form-user button {
