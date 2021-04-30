@@ -24,3 +24,15 @@ git checkout nome-branch-aula-ao-vivo
 Todos os conteúdos dados em aulas estarão no seu respectivo Pull Request!
 
 ---
+
+
+### Projeto
+
+Estado inicial
+![image](mock1.png)
+
+Estado de erro
+![image](mock2.png)
+
+Estado final
+![image](mock3.png)
