@@ -1,79 +1,9 @@
 import React from 'react';
 import './App.css';
-import Input from './components/Input';
 
 class App extends React.Component {
 
-  constructor() {
-    super()
-
-    this.state = {
-      name: '',
-      password: '',
-      email: '',
-      terms: false,
-      errors: {
-        name: '',
-        password: '',
-        email: ''
-      }
-    }
-  }
-
-  handleValue = (event) => {
-    const { target: { value, name } } = event
-    let newError = '';
-
-    if(name === 'name' && value.length > 10) {
-      newError = "Nome deve ser menor que 10";
-    }
-
-    if(name === 'password' && value === '12345') {
-      newError = "Senha fácil demais";
-    }
-
-    if(name === 'email' && !value.includes('@')) {
-      newError = "email inválido";
-    }
-
-    this.setState({
-      errors: {
-        ...this.state.errors,
-        [name]: newError
-      },
-      [name]: value
-    })
-  }
-
-  handleCheck = (event) => {
-    this.setState({ terms: event.target.checked })
-  }
-
-  handleSubmit = (event) => {
-    event.preventDefault();
-
-    const { name, password, email } = this.state.errors
-
-    if(name === "" && password === "" && email === "" ) {
-      const cadastroPessoa = {
-        name: this.state.name,
-        password: this.state.password,
-        email: this.state.email,
-        terms: this.state.terms,
-      }
-      console.log(cadastroPessoa)
-      alert(`Pessoa ${this.state.name} cadastrada com sucesso`);
-
-      this.setState({
-        name: '',
-        password: '',
-        email: '',
-        terms: false,
-      })
-    }
-
-  }
-
+  
   render() {
     return (
       <main className="app">
@@ -82,12 +12,16 @@ class App extends React.Component {
           <h1>Cadastro</h1>
           <form onSubmit={this.handleSubmit}>
 
-            <Input
-              name="name"
-              value={this.state.name}
-              error={this.state.errors.name}
-              handleChange={this.handleValue}
-            />
+            <div className="input-group">
+              <label>Name</label>
+              <input
+                type="text"
+                onChange={this.handleValue}
+                name="name"
+                value={this.state.name}
+              />
+              <span>{this.state.errors.name}</span>
+            </div>
 
             <div className="input-group">
               <label>Email</label>
