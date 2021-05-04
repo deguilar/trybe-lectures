@@ -1,12 +1,21 @@
-import './App.css';
-import Title from './components/Title';
+import React from "react";
 
-function App() {
-  return (
-    <main className="app">
-      <Title title="Cronometro" />
-    </main>
-  );
+import Clock from "./components/Clock"
+import Title from './components/Title';
+import './App.css';
+
+class App extends React.Component {
+
+  render() {
+    return (
+      <main className="app">
+        <Title title="Cronometro" />
+        <Clock />
+
+      </main>
+    );
+  }
+
 }
 
 export default App;
