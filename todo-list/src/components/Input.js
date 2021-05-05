@@ -5,7 +5,7 @@ export default function Input({ value, onAddTodo, onChange }) {
   return (
     <form onSubmit={onAddTodo} className="input-todo">
       <input value={value} onChange={onChange} />
-      <button>+</button>
+      <button type="submit">+</button>
     </form>
   )
 }

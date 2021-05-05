@@ -5,6 +5,7 @@ import Input from './components/Input';
 import Todos from './components/TodoList';
 import data from "./data"
 import './App.css';
+import Button from './components/Button';
 
 class App extends React.Component {
 
@@ -13,8 +14,17 @@ class App extends React.Component {
 
     this.state = {
       todos: [],
+      loading: false,
       newTodo: ''
     }
+  }
+
+  componentDidMount() {
+    this.setState({ loading: true }, () => {
+      setTimeout(() => {
+        this.setState({ todos: data, loading: false })
+      }, 1000)
+    })
   }
 
   handleTodo = (event) => {
@@ -36,16 +46,22 @@ class App extends React.Component {
     }
   }
 
+  handleClearAll = () => {
+    this.setState({ todos: [] })
+  }
+
   render() {
 
-    const { newTodo, todos } = this.state;
+    const { newTodo, todos, loading } = this.state;
 
     return (
       <main className="app">
         <section className="container">
           <Title title="Todo App" />
           <Input value={newTodo} onChange={this.handleTodo} onAddTodo={this.handleAddTodo} />
-          <Todos todos={todos} />
+          {loading ? "Loading..." : <Todos todos={todos} />}
+
+          {todos.length > 0 && <Button text="Limpar tudo" onClick={this.handleClearAll}/>}
         </section>
       </main>
     );
