@@ -7,3 +7,7 @@
   flex-direction: column;
   justify-content: center;
 }
+
+.clock-container {
+  margin: 2rem;
+}

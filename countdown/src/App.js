@@ -32,7 +32,9 @@ class App extends React.Component {
       <main className="app">
         <Title title="Relógio digital" />
 
-        {showCronometro && <Clock />}
+        <div className="clock-container">
+          {showCronometro && <Clock />}
+        </div>
 
         <Buttons
           handleStart={handleStart}
