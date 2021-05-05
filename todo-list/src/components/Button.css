@@ -1,0 +1,17 @@
+.button-container {
+  min-width: 3rem;
+  height: 2rem;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  margin-left: 5px;
+  outline: none;
+  background: #8E49E8;
+  cursor: pointer;
+  border-radius: 3px;
+  opacity: 0.6;
+}
+
+.button-container:hover {
+  background: #721ce3;
+}

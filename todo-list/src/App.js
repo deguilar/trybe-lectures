@@ -3,7 +3,7 @@ import React from 'react'
 import Title from './components/Title';
 import Input from './components/Input';
 import Todos from './components/TodoList';
-import data from "./data"
+import { getDataFromApi, postDataApi } from "./utils/fakeApi"
 import './App.css';
 import Button from './components/Button';
 
@@ -20,10 +20,9 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({ loading: true }, () => {
-      setTimeout(() => {
-        this.setState({ todos: data, loading: false })
-      }, 1000)
+    this.setState({ loading: true }, async() => {
+      const response = await getDataFromApi()
+      this.setState({ todos: response, loading: false })
     })
   }
 
@@ -37,17 +36,22 @@ class App extends React.Component {
 
     if(this.state.newTodo.length) {
       //nao adiciona string vazia
-      this.setState((prevState) => {
-        return {
-          todos: [ ...prevState.todos, prevState.newTodo ],
-          newTodo: ''
-        }
-      })
+      this.setState({ loading: true }, this.saveTodo)
     }
   }
 
   handleClearAll = () => {
     this.setState({ todos: [] })
+  }
+
+  saveTodo = async () => {
+    await postDataApi(this.state.newTodo);
+
+    this.setState((prevState) => ({
+      todos: [ ...prevState.todos, prevState.newTodo ],
+      newTodo: '',
+      loading: false
+    }))
   }
 
   render() {

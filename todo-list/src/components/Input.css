@@ -1,25 +1,9 @@
 .input-todo {
   width: 100%;
-
   display: flex;
+  font-size: 2rem;
 }
 
 .input-todo input {
   width: 100%;
-}
-
-.input-todo button{
-  width: 2rem;
-  border: none;
-  color: #fff;
-  margin-left: 5px;
-  font-size: 21px;
-  outline: none;
-  background: #8E49E8;
-  cursor: pointer;
-  border-radius: 3px;
-  opacity: 0.6;
-}
-.input-todo button:hover {
-  background: #721ce3;
 }
