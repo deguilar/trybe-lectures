@@ -7,17 +7,48 @@ import './App.css';
 
 class App extends React.Component {
 
+  constructor() {
+    super()
+
+    this.state = {
+      showDate: true
+    }
+  }
+
+  handleStart = (event) => {
+    this.setState({ showDate: true })
+  }
+
+  handleClose = (event) => {
+    this.setState({ showDate: false })
+  }
+
+  handleShow = () => {
+    if(this.state.showDate) {
+      return <Clock />
+    }
+
+    return (
+      <section>
+        <p>Bem vindo turma</p>
+      </section>
+    )
+  }
+
   render() {
+
+    const element = this.handleShow()
 
     return (
       <main className="app">
         <Title title="Relógio digital" />
 
         <div className="clock-container">
-          <Clock />
+          {element}
+          {/* {this.state.showDate ? <Clock /> : ""} */}
         </div>
 
-        <Buttons onStart={console.log} onClose={console.log} />
+        <Buttons onStart={this.handleStart} onClose={this.handleClose} />
       </main>
     );
   }
