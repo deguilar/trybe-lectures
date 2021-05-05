@@ -1,0 +1,13 @@
+.app {
+  text-align: center;
+  background-color: black;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.clock-container {
+  margin: 2rem;
+}
