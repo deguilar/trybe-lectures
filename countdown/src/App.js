@@ -37,8 +37,8 @@ class App extends React.Component {
         </div>
 
         <Buttons
-          handleStart={handleStart}
-          handleClose={handleClose}
+          onStart={handleStart}
+          onClose={handleClose}
         />
       </main>
     );
