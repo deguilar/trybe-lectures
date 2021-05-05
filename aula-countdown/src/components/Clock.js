@@ -6,7 +6,7 @@ export default class Clock extends Component {
   render() {
     return (
       <section className="clock" >
-        16:40:00 PM
+        04:40:00 PM
       </section>
     )
   }
