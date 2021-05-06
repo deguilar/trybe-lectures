@@ -1,5 +1,13 @@
+.solutions {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 1rem;
+}
+
 .solution-link {
   color: black;
   text-decoration: underline;
-  padding: 0px;
+  margin-bottom: 2rem;
+  cursor: pointer;
 }
