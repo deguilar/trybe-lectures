@@ -1,10 +1,10 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Home from './Home';
-import Solutions from './Solutions';
-import TrybeContent from './TrybeContent';
-import Schedule from './Schedule';
-import Setup from './Setup';
+import Home from '../pages/Home';
+import Solutions from '../pages/Solutions';
+import TrybeContent from '../pages/TrybeContent';
+import Schedule from '../pages/Schedule';
+import Setup from '../pages/Setup';
 
 function Content() {
   const sampleData = ['12.1', '12.2', '12.3'];
