@@ -1,10 +1,12 @@
 import './App.css';
+import { BrowserRouter } from 'react-router-dom'
+import TrybePage from './components/TrybePage';
 
 function App() {
   return (
-    <div className="app">
-      Trybe replica
-    </div>
+    <BrowserRouter>
+      <TrybePage />
+    </BrowserRouter>
   );
 }
 

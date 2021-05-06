@@ -1,0 +1,52 @@
+
+.trybe-header {
+  min-height: 4rem;
+  display: flex;
+  flex-direction: row;
+  background-color: #0fa36b;
+}
+
+.trybe-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.trybe-nav a {
+  cursor: pointer;
+  padding: 1rem;
+  color: white;
+  background-color: transparent;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.trybe-nav img {
+  height: 3rem;
+}
+
+.trybe-nav a:hover {
+  background-color: #37d699;
+}
+
+.trybe-nav a:first-child:hover {
+  background-color: #0fa36b;
+}
+
+.trybe-nav a:first-child {
+  flex: 1
+}
+
+@media (max-width: 750px) {
+  .trybe-nav {
+    flex-direction: column;
+  }
+
+  .trybe-nav a {
+    width: 100%;
+    text-align: center;
+  }
+}
