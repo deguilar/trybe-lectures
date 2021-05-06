@@ -5,8 +5,8 @@ import "./Header.css"
 
 function Header() {
   return (
-    <header className="trybe-header">
-      <nav className="trybe-nav">
+    <header className="header">
+      <nav>
         <Link to='/'><img src={logo} alt="Logo da Trybe" />Curso</Link>
         <Link to='/solutions'>Gabaritos</Link>
         <Link to='/schedule'>Agenda</Link>

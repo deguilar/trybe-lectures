@@ -1,12 +1,12 @@
 
-.trybe-header {
+.header {
   min-height: 4rem;
   display: flex;
   flex-direction: row;
   background-color: #0fa36b;
 }
 
-.trybe-nav {
+.header > nav {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -15,7 +15,7 @@
   width: 100%;
 }
 
-.trybe-nav a {
+.header > nav a {
   cursor: pointer;
   padding: 1rem;
   color: white;
@@ -25,28 +25,28 @@
   text-decoration: none;
 }
 
-.trybe-nav img {
+.header > nav img {
   height: 3rem;
 }
 
-.trybe-nav a:hover {
+.header > nav a:hover {
   background-color: #37d699;
 }
 
-.trybe-nav a:first-child:hover {
+.header > nav a:first-child:hover {
   background-color: #0fa36b;
 }
 
-.trybe-nav a:first-child {
+.header > nav a:first-child {
   flex: 1
 }
 
 @media (max-width: 750px) {
-  .trybe-nav {
+  .header > nav {
     flex-direction: column;
   }
 
-  .trybe-nav a {
+  .header > nav a {
     width: 100%;
     text-align: center;
   }

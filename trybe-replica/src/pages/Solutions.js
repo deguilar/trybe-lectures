@@ -8,17 +8,17 @@ function Solutions(props) {
   if (solutionId) return <h2>{solutionId}</h2>;
 
   return (
-    <section>
+    <section className="solutions">
       <h1>Gabaritos</h1>
-      <div className="solutions">
+      <ul>
         {props.availableSolutions.map((solution) => (
-          <div key={solution} className="solution-link">
+          <li key={solution}>
             <Link to={`/solutions/${solution}`}>
               {solution}
             </Link>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   )
 }

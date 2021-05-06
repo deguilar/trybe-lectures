@@ -1,13 +1,13 @@
-.solutions {
+.solutions ul {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   padding: 1rem;
+  list-style: none;
 }
 
-.solution-link {
+.solutions li {
   color: black;
-  text-decoration: underline;
   margin-bottom: 2rem;
   cursor: pointer;
 }
