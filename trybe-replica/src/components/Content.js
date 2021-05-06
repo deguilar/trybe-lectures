@@ -5,6 +5,8 @@ import Solutions from '../pages/Solutions';
 import TrybeContent from '../pages/TrybeContent';
 import Schedule from '../pages/Schedule';
 import Setup from '../pages/Setup';
+import Solution from '../pages/Solution';
+
 
 function Content() {
   const sampleData = ['12.1', '12.2', '12.3'];
@@ -13,7 +15,7 @@ function Content() {
     <main>
       <Switch>
         <Route exact path='/' component={Home} />
-        <Route path="/solutions/:solutionId" component={Solutions} />
+        <Route path="/solutions/:solutionId" component={Solution} />
         <Route
           path="/solutions"
           render={props => <Solutions {...props} availableSolutions={sampleData} />}
