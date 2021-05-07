@@ -1,13 +1,18 @@
 import './App.css';
-import { BrowserRouter } from 'react-router-dom'
 import Header from './components/Header';
 import Content from './components/Content';
+import { BrowserRouter } from 'react-router-dom'
 
 function App() {
+
+  const nomes = ['Trybe', 'Turma', 'React']
+
   return (
     <BrowserRouter>
-      <Header />
-      <Content />
+      <div>
+        <Header />
+        <Content nomes={nomes} />
+      </div>
     </BrowserRouter>
   );
 }
