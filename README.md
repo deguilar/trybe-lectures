@@ -1,29 +1,15 @@
-# Repositorio de aulas ao vivo para estudante da Turma 10 - Tribo A
+# Desafios
 
-Este repositório armazena os códigos e scripts fornecidos durante as aulas ao vivo pelos especialistas da Trybe.
-
-## Começando
-
-Basta clonar o repositório
-
-```sh
-git clone git@github.com:tryber/sd-10a-live-lectures.git
-```
-
-Em seguida acessar a branch do Pull Request da aula seguindo o padrão de nomenclatura das branchs **(nome-branch-aula)**
-
-Exemplo:
-```sh
-git checkout nome-branch-aula-ao-vivo
-```
-
----
-
-### Estrutura
-
-Todos os conteúdos dados em aulas estarão no seu respectivo Pull Request!
-
----
+1. Faca o contador ir aumentando o seu valor depois que o componente for criado.
+2. Pare o contador quando o componente for desmontado
+3. Crie uma pagina Home e uma pagina Contador(renderiza o codigo do contador)
+5. Crie outras paginas: Alunos, Projetos.
+4. Navegue ate a pagina Contador a partir de um menu na Header
+6. Crie um array de nomes de alunos na App.js
+7. Passe esse Array de alunos para a pagina Alunos
+8. Renderize cada aluno na pagina Alunos com um link para a pagina daquele aluno
+9. Crie uma rota para a pagina de Aluno
+10. Crie um botao para voltar para a pagina de alunos na pagina Aluno
 
 ### Projeto
 

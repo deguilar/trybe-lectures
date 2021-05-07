@@ -1,0 +1,7 @@
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50rem;
+  font-size: 10rem;
+}
