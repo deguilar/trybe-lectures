@@ -9,6 +9,8 @@ export default class Contador extends Component {
     this.state = {
       counter: 1
     }
+
+
   }
 
   render() {
