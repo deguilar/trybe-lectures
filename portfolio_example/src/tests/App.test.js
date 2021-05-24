@@ -51,6 +51,27 @@ describe('App.js tests', () => {
 
 describe('App.js Comments test', () => {
   test('Entra na página /comments e deixa um comentário', () => {
+    const { getByRole, history } = renderWithRouter(<App />);
 
+    history.push('/comments');
+
+    const commentsText = getByRole('heading', {
+      name: /comente!/i,
+      level: 1,
+    });
+
+    expect(commentsText).toBeInTheDocument();
+
+    const commentsInput = screen.getByRole('textbox');
+    userEvent.type(commentsInput, 'alguma coisa');
+
+    const addCommentButton = screen.getByRole('button', {
+      name: /add comment/i,
+    });
+    userEvent.click(addCommentButton);
+
+    const listItem = screen.getByText('alguma coisa');
+
+    expect(listItem).toBeInTheDocument();
   });
 });
