@@ -1,38 +1,32 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import selectMovieAction from '../actions/movieActions';
+import { selectMovie as selectMovieActionCreator } from '../actions';
 
 class Sidebar extends React.Component {
   render() {
     const { categories, selectMovie } = this.props;
     return (
       <aside>
-        {
-          categories.map((category) => (
-            <div key={ category.id }>
-              <h3>{category.name}</h3>
-              <ul>
-                {
-                  category.movies.map((movie) => (
-                    <li key={ movie.id }>
-                      {movie.title}
-                      {' '}
-                      was released in
-                      {' '}
-                      {movie.released}
-                      <button
-                        type="button"
-                        onClick={ () => selectMovie(category, movie) }
-                      >
-                        Select
-                      </button>
-                    </li>
-                  ))
-                }
-              </ul>
-            </div>
-          ))
-        }
+        {categories.map((category) => (
+          <div key={ 1 }>
+            <h3>{category.name}</h3>
+            <ul>
+              {category.movies.map((movie) => (
+                <li key={ 1 }>
+                  {movie.title}
+                  was released in
+                  {movie.released}
+                  <button
+                    type="button"
+                    onClick={ () => selectMovie(category, movie) }
+                  >
+                    Select
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </aside>
     );
   }
@@ -43,13 +37,9 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  selectMovie: (category, movie) => dispatch(
-    selectMovieAction(category, movie),
+  selectMovie: (selectedCategory, selectedMovie) => dispatch(
+    selectMovieActionCreator(selectedCategory, selectedMovie),
   ),
 });
-
-// store.getState();
-
-// store.dispatch();
 
 export default connect(mapStateToProps, mapDispatchToProps)(Sidebar);

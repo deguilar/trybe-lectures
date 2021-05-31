@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 class Player extends React.Component {
   render() {
-    const { selectedMovie, selectedCategory } = this.props;
+    const { selectedCategory, selectedMovie } = this.props;
     return (
       <div>
         <h1>
