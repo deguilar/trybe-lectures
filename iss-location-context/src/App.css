@@ -8,8 +8,8 @@ h1 {
 }
 
 body {
-  background: #303030;
-  color: white;
+  background: #d3c4d3;
+  color: rgb(58, 55, 55);
 }
 
 .App {
@@ -23,7 +23,7 @@ body {
 }
 
 .purple-font {
-  color: #5d68ff;
+  color: #ff73fa;
 }
 
 .lat-long-section {

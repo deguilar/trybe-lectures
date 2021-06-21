@@ -1,23 +1,19 @@
 import React, { Component } from 'react';
 import Marker from 'pigeon-marker';
 import Map from 'pigeon-maps';
-import { connect } from 'react-redux';
-import { getISSLocationThunk } from '../actions';
 
 import Coordinates from './Coordinates';
 
 const ONE_SECOND = 1000;
 class ISSLocation extends Component {
   componentDidMount() {
-    const { getISSLocation } = this.props;
-
     setInterval(() => {
-      getISSLocation();
+      // update coordinates
     }, ONE_SECOND);
   }
 
   render() {
-    const { latitude, longitude } = this.props;
+    const { latitude, longitude } = { latitude: 10.0, longitude: 20.0 };
 
     return (
       <main>
@@ -39,13 +35,4 @@ class ISSLocation extends Component {
   }
 }
 
-const mapStateToProps = ({ issLocation: { latitude, longitude } }) => ({
-  latitude,
-  longitude,
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  getISSLocation: () => dispatch(getISSLocationThunk()),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(ISSLocation);
+export default ISSLocation;
