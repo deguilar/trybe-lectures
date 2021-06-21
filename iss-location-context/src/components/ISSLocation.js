@@ -3,17 +3,19 @@ import Marker from 'pigeon-marker';
 import Map from 'pigeon-maps';
 
 import Coordinates from './Coordinates';
+import ISSContext from '../context/ISSContext';
 
 const ONE_SECOND = 1000;
 class ISSLocation extends Component {
   componentDidMount() {
+    const { getISSLocation } = this.context;
     setInterval(() => {
-      // update coordinates
+      getISSLocation();
     }, ONE_SECOND);
   }
 
   render() {
-    const { latitude, longitude } = { latitude: 10.0, longitude: 20.0 };
+    const { latitude, longitude } = this.context;
 
     return (
       <main>
@@ -34,5 +36,7 @@ class ISSLocation extends Component {
     );
   }
 }
+
+ISSLocation.contextType = ISSContext;
 
 export default ISSLocation;
