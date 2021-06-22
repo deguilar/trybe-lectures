@@ -1,14 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import QuestionsContext from '../context/QuestionsContext';
 
 import QuestionCard from './QuestionCard';
 
 function QuestionList() {
-  const questions = [{
-    id: 1,
-    question: "Como fazer uma poção polissuco?",
-    archive: false,
-    user: "Hermione Granger"
-  }];
+  const { questions } = useContext(QuestionsContext); // => estado global
 
   return (
     <section>

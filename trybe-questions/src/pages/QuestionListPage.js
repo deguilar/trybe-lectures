@@ -4,6 +4,11 @@ import QuestionList from '../components/QuestionList';
 import QuestionsContext from '../context/QuestionsContext';
 
 class QuestionListPage extends React.Component {
+  componentDidMount() {
+    const { fetchQuestions } = this.context;
+    fetchQuestions();
+  }
+
   render() {
     const { isLoading } = { isLoading: false };
     const { history } = this.props;
