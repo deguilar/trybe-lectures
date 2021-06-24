@@ -1,23 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './App.css';
 import ISSLocation from './components/ISSLocation';
-import ISSProvider from './context/ISSProvider';
+import PeopleInSpace from './components/PeopleInSpace';
+import ISSContext from './context/ISSContext';
 
-class App extends React.Component {
-  render() {
-    return (
-      <ISSProvider>
-        <div className="App">
-          <h1>
-            Space Station
-            {' '}
-            <span className="purple-font">Tracker</span>
-          </h1>
-          <ISSLocation />
-        </div>
-      </ISSProvider>
-    );
-  }
+function App() {
+  const { showMap, toggleMap } = useContext(ISSContext);
+  return (
+    <div className="App">
+      <h1>
+        Space Station
+        {' '}
+        <span className="purple-font">Tracker</span>
+      </h1>
+      <button type="button" onClick={ toggleMap }>Esconder mapa</button>
+      {showMap && <ISSLocation />}
+      <PeopleInSpace />
+    </div>
+  );
 }
 
 export default App;

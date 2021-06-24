@@ -1,6 +1,6 @@
 import React from 'react';
 import ISSContext from './ISSContext';
-import { getCurrentISSLocation } from '../services/issAPI';
+import { getCurrentISSLocation, getPeopleInSpace } from '../services/issAPI';
 
 class ISSProvider extends React.Component {
   constructor() {
@@ -12,9 +12,12 @@ class ISSProvider extends React.Component {
       error: null,
       isFetching: false,
       peopleInSpace: [],
+      showMap: true,
     };
 
     this.getISSLocation = this.getISSLocation.bind(this);
+    this.toggleMap = this.toggleMap.bind(this);
+    this.getPeopleInSpace = this.getPeopleInSpace.bind(this);
   }
 
   getISSLocation() {
@@ -32,13 +35,34 @@ class ISSProvider extends React.Component {
     });
   }
 
+  getPeopleInSpace() {
+    // seta isFetching pra true
+    // fazer a requisicao
+    // armazenar o resultado no context
+
+    this.setState({ isFetching: true }, async () => {
+      const { people } = await getPeopleInSpace();
+      this.setState({
+        peopleInSpace: people,
+        isFetching: false,
+      });
+    });
+  }
+
+  toggleMap() {
+    console.log('togglemap');
+    this.setState(({ showMap }) => ({ showMap: !showMap }));
+  }
+
   render() {
     const { children } = this.props;
     return (
       <ISSContext.Provider
         value={ {
           ...this.state,
+          toggleMap: this.toggleMap,
           getISSLocation: this.getISSLocation,
+          getPeopleInSpace: this.getPeopleInSpace,
         } }
       >
         {children}

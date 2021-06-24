@@ -1,42 +1,43 @@
-import React, { Component } from 'react';
-import Marker from 'pigeon-marker';
+import React, { useContext, useEffect } from 'react';
 import Map from 'pigeon-maps';
+import Marker from 'pigeon-marker';
 
 import Coordinates from './Coordinates';
 import ISSContext from '../context/ISSContext';
+import useTimer from '../effects/useTimer';
 
 const ONE_SECOND = 1000;
-class ISSLocation extends Component {
-  componentDidMount() {
-    const { getISSLocation } = this.context;
-    setInterval(() => {
-      getISSLocation();
-    }, ONE_SECOND);
-  }
 
-  render() {
-    const { latitude, longitude } = this.context;
+function ISSLocation() {
+  const { latitude, longitude, getISSLocation } = useContext(ISSContext);
 
-    return (
-      <main>
-        <div className="map">
-          <Map
-            center={ [0, 0] }
-            defaultWidth={ 450 }
-            height={ 450 }
-            minZoom={ 1.5 }
-            maxZoom={ 8 }
-            zoom={ 1.5 }
-          >
-            <Marker anchor={ [latitude, longitude] } />
-          </Map>
-        </div>
-        <Coordinates latitude={ latitude } longitude={ longitude } />
-      </main>
-    );
-  }
+  useTimer(getISSLocation, ONE_SECOND);
+
+  // useEffect(() => {}); => componentDidUpdate
+  // useEffect(() => {}, []); => componentDidMount
+  // useEffect(() => { return () => {} }, []); => componentWillUnmount
+
+  useEffect(() => {
+    document.title = new Date().toLocaleTimeString();
+  });
+
+  return (
+    <main>
+      <div className="map">
+        <Map
+          center={ [0, 0] }
+          defaultWidth={ 450 }
+          height={ 450 }
+          minZoom={ 1.5 }
+          maxZoom={ 8 }
+          zoom={ 1.5 }
+        >
+          <Marker anchor={ [latitude, longitude] } />
+        </Map>
+      </div>
+      <Coordinates latitude={ latitude } longitude={ longitude } />
+    </main>
+  );
 }
-
-ISSLocation.contextType = ISSContext;
 
 export default ISSLocation;
