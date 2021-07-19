@@ -22,7 +22,22 @@ enableChalkboard: false
 
 ---
 
+## Nãó é foco de hoje
+
+* Criar tabelas
+* Aprender sobre detalhes específicos do Workbench
+* Falar sobre arquitetura / cloud / devops
+
+---
+
 ![Distinct](./images/distinct.png){ width=100% }
+
+
+---
+
+### PAGINAÇÃO
+
+![Paginação](./images/paginacao.png){ width=100% }
 
 ---
 
@@ -35,6 +50,12 @@ enableChalkboard: false
 ### OFFSET
 
 ![OFFSET](./images/limit-offset.png){ width=100% }
+
+---
+
+### Como calcular totais?
+
+![total](./images/total.png){ width=100% }
 
 ---
 
@@ -53,6 +74,30 @@ enableChalkboard: false
 ![ORDERBY](./images/orderby.png){ width=90% }
 
 ---
+
+### Revisão
+
+---
+
+![Distinct](./images/examples/distinct.png){ width=100% }
+
+---
+
+![LIMIT](./images/examples/limit.png){ width=100% }
+
+---
+
+![OFFSET](./images/examples/limit_offset.png){ width=100% }
+
+---
+
+![COUNT](./images/examples/count.png){ width=100% }
+
+---
+
+![ORDER BY](./images/examples/order_by.png){ width=100% }
+
+
 
 ### Dúvidas?
 
