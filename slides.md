@@ -57,3 +57,9 @@ enableChalkboard: false
 ### Dúvidas?
 
 ![alt](https://media3.giphy.com/media/3o6MbudLhIoFwrkTQY/giphy.gif?cid=790b76117789c6161150915091725a365bdeac4e06fd01cd&rid=giphy.gif&ct=g){ width=90% }
+
+---
+
+### Momento Spoiler
+
+Como podemos aplicar os aprendizados de hoje?
