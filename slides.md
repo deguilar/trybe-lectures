@@ -30,6 +30,29 @@ enableChalkboard: false
 
 ---
 
+### Queries
+
+---
+
+Postgres VS MySQL
+
+[![PostgresSQL VS MySQL 1](/images/sintaxe1.png)](https://www.the-art-of-web.com/sql/postgres-mysql/)
+
+---
+
+Postgres VS MySQL
+
+[![PostgresSQL VS MySQL 2](/images/sintaxe2.png)](https://www.the-art-of-web.com/sql/postgres-mysql/)
+
+---
+
+SQL Server VS MySQL
+
+[![SQL Server VS MySQL](/images/sintaxe3.png)](http://www.host.com/link.html)
+
+
+---
+
 ![Distinct](./images/distinct.png){ width=100% }
 
 

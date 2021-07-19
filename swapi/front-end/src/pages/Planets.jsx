@@ -8,6 +8,7 @@ function Planets() {
 	const [orderByColumn, setOrderByColumn] = useState('name');
 	const [orderDirection, setOrderDirection] = useState('asc');
 	const [currentPage, setCurrentPage] = useState(1);
+	const [linkPages, setLinkPages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
 	useEffect(() => {
@@ -26,6 +27,8 @@ function Planets() {
 				setPlanets(data.planets);
 				setTotal(data.total);
         setIsLoading(false);
+				setLinkPages([...Array(data.total/10).keys()])
+
       });
 	}, [currentPage, orderByColumn, orderDirection])
 
@@ -43,10 +46,10 @@ function Planets() {
 
   return (
     <div>
-			<div class='row'>
+			<div className='row'>
 				<label>Ordenar por</label>
-				<div class="col-sm-6">
-					<select onChange={handleChange} value={orderByColumn} class='form-select'>
+				<div className="col-sm-6">
+					<select onChange={handleChange} value={orderByColumn} className='form-select'>
 						<option value='name'>Nome</option>
 						<option value='rotation_period'>Período de rotação</option>
 						<option value='orbital_period'>Período de órbita</option>
@@ -54,8 +57,8 @@ function Planets() {
 						<option value='population'>População</option>
 					</select>
 				</div>
-				<div class="col-sm-6">
-					<select onChange={handleOrderDirection} value={orderDirection} class='form-select'>
+				<div className="col-sm-6">
+					<select onChange={handleOrderDirection} value={orderDirection} className='form-select'>
 						<option value='asc'>CRESCENTE</option>
 						<option value='desc'>DECRESCENTE</option>
 					</select>
@@ -64,7 +67,7 @@ function Planets() {
 			<hr />
 			<div className="row">
 				<h3>{total} Planetas</h3>
-				<table class='table table-striped'>
+				<table className='table table-striped'>
 					<thead>
 						<tr>
 							<th>Nome</th>
@@ -89,8 +92,13 @@ function Planets() {
 				</table>
 
 				<ul className="pagination">
-					<li className="page-item"><a href={`?page=${currentPage - 1}&orderBy=${orderByColumn}`} class='page-link'>Anterior</a></li>
-					<li className="page-item"><a href={`?page=${currentPage + 1}&orderBy=${orderByColumn}`} class='page-link'>Próximo</a></li>
+					<li className="page-item"><a href={`?page=${currentPage - 1}&orderBy=${orderByColumn}`} className='page-link'>Anterior</a></li>
+
+					{linkPages.map((page) => (
+						<li key={page} className='page-item'><a href={`?page=${page + 1}&orderBy=${orderByColumn}`} className='page-link'>{page + 1}</a></li>
+					))}
+
+					<li className="page-item"><a href={`?page=${currentPage + 1}&orderBy=${orderByColumn}`} className='page-link'>Próximo</a></li>
 				</ul>
 			</div>
     </div>
