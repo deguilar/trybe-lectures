@@ -4,6 +4,7 @@ import queryString from 'query-string';
 
 function Planets() {
   const [planets, setPlanets] = useState([]);
+	const [total, setTotal] = useState(0);
 	const [orderByColumn, setOrderByColumn] = useState('name');
 	const [orderDirection, setOrderDirection] = useState('asc');
 	const [currentPage, setCurrentPage] = useState(1);
@@ -23,6 +24,7 @@ function Planets() {
       .then((response) => response.json())
       .then((data) => {
 				setPlanets(data.planets);
+				setTotal(data.total);
         setIsLoading(false);
       });
 	}, [currentPage, orderByColumn, orderDirection])
@@ -61,7 +63,7 @@ function Planets() {
 			</div>
 			<hr />
 			<div className="row">
-				<h3>Planetas</h3>
+				<h3>{total} Planetas</h3>
 				<table class='table table-striped'>
 					<thead>
 						<tr>
