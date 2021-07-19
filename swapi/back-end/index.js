@@ -13,6 +13,11 @@ const connection = mysql.createPool({
 
 app.use(cors());
 
+app.get('/people', async(req, res) => {
+	const [rows] = await connection.execute('SELECT * FROM star_wars.people');
+	res.status(200).json({ people: rows })
+});
+
 app.get('/planets', async(req, res) => {
 	let { page, orderBy, orderDirection } = req.query;
 	orderBy = orderBy || 'name';
