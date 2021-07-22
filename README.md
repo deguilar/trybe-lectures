@@ -83,4 +83,18 @@ sudo service mysql start // Para iniciar
 
 ---
 
+##### Problema 3
+
+> ERROR 1819 (HY000): Your password does not satisfy the current policy requirements.
+
+Execute os comandos abaixo, dentro do MYSQL:
+```sh
+// 'root' se o seu usuário chamar root
+sudo mysql -u root -p
+```
+
+```
+SET GLOBAL validate_password.policy=LOW;
+```
+
 #### :warning: Vale ressaltar que em algumas máquinas os passos não dão certo :disappointed: então suba os requisitos para serem avaliados no GitHub :+1: :warning:
