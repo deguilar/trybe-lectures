@@ -18,6 +18,7 @@ enableChalkboard: false
 - JOIN
 - UNION
 - Subqueries
+- EXISTS
 
 ---
 
@@ -117,6 +118,11 @@ WHERE a.first_name=b.first_name;
 ---
 
 ### SUBQUERY
+
+---
+
+
+### EXISTS
 
 ---
 
