@@ -49,6 +49,12 @@ enableChalkboard: false
 
 ![SQL](./images/after_inner_join.png)
 
+---
+
+### LEFT JOIN
+
+![tabelas](./images/left_join_desenho.png)
+
 
 ---
 
@@ -61,6 +67,12 @@ enableChalkboard: false
 ### LEFT JOIN
 
 ![tabelas](./images/left_join.png)
+
+---
+
+### RIGHT JOIN
+
+![tabelas](./images/right_join_desenho.png)
 
 ---
 
