@@ -97,4 +97,23 @@ sudo mysql -u root -p
 SET GLOBAL validate_password.policy=LOW;
 ```
 
+---
+
+##### Problema 4
+
+> The name org.freedesktop.secrets was not provided by any .service files
+
+Se ao tentar conectar com o banco pelo MySQLWorkbench uma pop up surgir com o erro acima, ou algum erro semelhante que envolva o termo `org.freedesktop.secrets`: é possível que o problema seja relativo à **keyring**, um programinha que o sistema operacional usa para armazenar senhas e credenciais.
+
+Para resolver, vocês podem tentar instalar o **gnome-keyring**:
+
+```sh
+sudo apt-get update -y
+```
+```sh
+sudo apt-get install -y gnome-keyring
+```
+
+Fechar e abrir novamente o workbench após a instalação e testar a conexão com o banco.
+
 #### :warning: Vale ressaltar que em algumas máquinas os passos não dão certo :disappointed: então suba os requisitos para serem avaliados no GitHub :+1: :warning:
