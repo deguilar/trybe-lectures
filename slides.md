@@ -1,0 +1,54 @@
+---
+theme: "night"
+transition: "slide"
+title: "Banco de dados"
+enableMenu: false
+enableSearch: false
+enableChalkboard: false
+---
+
+### Formas normais
+
+![SQL](https://media2.giphy.com/media/vISmwpBJUNYzukTnVx/giphy.gif){ width=60% }
+
+---
+
+### Foco da aula
+
+Entender como as formas normais nos ajudam a construir banco de dados mais organizados e com mais integridade entre os dados.
+
+![](https://media.giphy.com/media/kPrlykW2TpVU4HWx2O/giphy.gif)
+
+---
+
+## Aprendizagem Ativa 
+
+Sala de aula invertida
+
+![](https://media.giphy.com/media/Jo85Nij8XBKRvY5O00/giphy.gif)
+
+---
+
+## Aprendizagem Ativa 
+
+Aprendizagem baseada em Problemas
+
+![](https://media.giphy.com/media/zAJjKvxG4sCMKN4zov/giphy.gif)
+
+---
+
+## Agenda ⏰
+
+- Explicação do problema
+- Exercício em trincas - 1 hora
+- Intercâmbio entre trincas - 30 minutos
+- Possível solução para o problema proposto
+
+---
+
+## VQV
+
+![](https://media.giphy.com/media/l4KiaUHXv3dlpaUfu/giphy.gif)
+
+
+
