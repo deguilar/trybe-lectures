@@ -49,6 +49,7 @@ Aprendizagem baseada em Problemas
 ### ⚠️ Importante
 
 - Não se preocupem em seguir as 3 formas normais à risca.
+- Não é necessário fazer nada de SQL para a proposta dessa atividade.
 - Não tenham medo de "errar".
 - Não se preocupem em chegar ao "estado da arte". Façam o que conseguirem.
 
