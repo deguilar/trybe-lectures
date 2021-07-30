@@ -4,6 +4,7 @@
 	- [ ] Entidades
 	- [ ] Atributos
 	- [ ] Relacionamentos
+- [ ] [Intervalo]
 - [ ] Construir um diagrama de entidade-relacionamento para representar as entidades encontradas no passo 1. (15 minutos) [Intervalo]
 - [ ] Criar um banco de dados para conter suas tabelas. [5 minutos]
 - [ ] Criar e modelar tabelas tendo o diagrama do passo 2 como base. [20 minutos]

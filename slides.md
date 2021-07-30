@@ -11,6 +11,13 @@ enableChalkboard: false
 
 ![SQL](https://media2.giphy.com/media/vISmwpBJUNYzukTnVx/giphy.gif){ width=60% }
 
+
+---
+
+### Alinhamento sobre intervalo
+
+![intervalo](https://media.giphy.com/media/fveKCnZRN7aOrtWNfj/giphy.gif)
+
 ---
 
 ### Foco da aula
@@ -20,10 +27,13 @@ enableChalkboard: false
 * Como construir um diagrama de entidade-relacionamento;
 * Como criar um um banco de dados com SQL;
 
+---
+
 ### Caso de Uso: Biblioteca
 
 Vamos para prática.
 
+---
 
 ### Dúvidas?
 
