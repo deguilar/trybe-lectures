@@ -46,11 +46,16 @@ Aprendizagem baseada em Problemas
 
 ---
 
-# ⚠️ Importante
+### ⚠️ Importante
 
 - Não se preocupem em seguir as 3 formas normais à risca.
 - Não tenham medo de "errar".
 - Não se preocupem em chegar ao "estado da arte". Façam o que conseguirem.
+
+---
+
+### ⚠️ Importante
+
 - Deixem a criatividade fluir. Não tentem se podar.
 - Façam discussões construtivas usando bons argumentos.
 - Usem a dinâmica para aprender em conjunto. Se precisarem rever uma parte do conteúdo fiquem a vontade.
