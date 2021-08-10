@@ -45,6 +45,8 @@ enableChalkboard: false
 
 ### Comparando com banco relacional
 
+---
+
 ![](imgs/mongo-mysql.png)
 
 ---
