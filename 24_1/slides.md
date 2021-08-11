@@ -1,7 +1,8 @@
 ---
-theme: "white"
+theme: "night"
 transition: "slide"
 title: "MongoDB - Update Simples"
+highlightTheme: "monokai"
 enableMenu: false
 enableSearch: false
 enableChalkboard: false
@@ -135,3 +136,6 @@ Como o `$set` se comporta em níveis mais profundos de aninhamento? Nível 1, 2,
 * Deprecated: não utilizá-lo
 
 ---
+
+### FIM! 
+(por agora)
