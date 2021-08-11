@@ -1,29 +1,30 @@
 ---
 theme: "white"
 transition: "slide"
-title: "MongoDB"
+title: "MongoDB - Update Simples"
 enableMenu: false
 enableSearch: false
 enableChalkboard: false
 ---
 
-### BLOCO 23 DIA 1 - Introdução a NoSQL e MongoDB
-
-
----
-
-### Mongodb
+### BLOCO 24 DIA 1 - MongoDB: Updates Simples
 
 ---
 
-### Características
+### MongoDB: Updates Simples
 
-1. O nome vem da palavra inglesa Humongous que em uma tradução livre quer dizer Gigantesco.
-2. Ele é escrito em C++.
-3. É Open-source.
-4. Tem foco em Alta Disponibilidade e Alta Escalabilidade.
-5. É suportado pelas principais distribuições de Linux, Windows e também MacOS.
-6. Ele trás também o melhor dos dois mundos (relacional e não relacional).
+---
+
+### O que será feito hoje?
+
+* Vamos aprender a atualizar documentos no MongoDB
+* `updateOne()` & `updateMany()` 
+* Operadores: `$set`, `$mul`, `$inc`, `$min`, `$max`, `$currentDate`, `$rename` e `$unset`
+
+---
+
+### Relembrando: MongoDB Design
+<img src="./imgs/replicasets.png" />
 
 ---
 
