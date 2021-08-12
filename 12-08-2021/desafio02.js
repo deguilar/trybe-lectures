@@ -8,8 +8,7 @@ const assert = require('assert');
 // Os testes contêm alguns arrays muito grandes, então pense no desempenho.
 
 function findUniq(arr) {
-  arr.sort((a,b) => a - b);
-  return (arr[0] === arr[1]) ? arr.pop() : arr[0]
+
 }
 
 assert.deepStrictEqual(findUniq([ 3, 10, 3, 3, 3 ]), 10);
