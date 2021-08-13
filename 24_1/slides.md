@@ -37,7 +37,8 @@ db.collection.updateOne(
       other: "OtherValue",
       ...
     }
-  }
+  },
+  { ... } //optional parameters
 );
 ```
 
