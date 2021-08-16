@@ -38,4 +38,4 @@ const result = {
 };
 
 assert.deepStrictEqual(countChars(phrase), result);
-
+assert.deepStrictEqual(countChars(phrase)[Object.keys(countChars(phrase))[0]], 32);
