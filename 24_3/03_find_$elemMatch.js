@@ -1,11 +1,24 @@
-db.burgers.find({
+// sem usar elemMatch
+db.burgers.count({
+  'comentarios.usuario': "Renato",
+});
+    
+// usando elemMatch
+db.burgers.count({
   comentarios: {
     $elemMatch: { usuario: 'Renato' }
   }
 });
 
-db.burgers.find({
+// sem usar elemMatch
+db.burgers.count({
+  'comentarios.usuario': "Renato",
+	'comentarios.nota': { $lt: 5 } ,
+});
+
+// usando elemMatch
+db.burgers.count({
   comentarios: {
-    $elemMatch: { nota: { $lt: 5 } }
+    $elemMatch: { usuario: 'Renato', nota: { $lt: 5 } }
   }
 })

@@ -1,5 +1,5 @@
 db.burgers.find({
-  comentarios: { $size: 3.5 }
+  comentarios: { $size: 3 }
 })
 
 // Dá erro
