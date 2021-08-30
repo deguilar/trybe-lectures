@@ -11,7 +11,7 @@ const books = [
   { id: 3, title: 'Foundation', author: 'Isaac Asimov' }, 
 ];
 
-app.get('/books', (req, res) => {
+app.get('/books', (_req, res) => {
   res.status(200).json(books);
 });
 
@@ -25,7 +25,7 @@ app.post('/books', (req, res) => {
 
 app.put('/books/:id', (req, res) => {
   const { id } = req.params;
-	const { title, author } = req.body;
+  const { title, author } = req.body;
   const bookId = books.findIndex((b) => b.id === +id);
 
   if (bookId === -1) return res.status(404).json({ message: 'Book not found!' });
