@@ -13,13 +13,13 @@ const segundo = (req, res, next) => {
 }
 
 const final = (req, res) => {
-    console.log('FINAL');
+    console.log('FINAL V2');
     res.end();
 }
 
 
 app.get('/', primeiro, segundo, (req, res) => {
-    console.log('FINAL');
+    console.log('FINAL V1');
     res.end();
 })
 

@@ -23,6 +23,10 @@ enableChalkboard: false
 
 ---
 
+### O que são middlewares?
+
+---
+
 ### Problema
 
 - ##### Verificar se foi enviado um token através do headers que seja igual a palavra `secret`.
@@ -61,9 +65,7 @@ enableChalkboard: false
 
 ---
 
-### Rescue
-
-![Rescue](./images/rescue.png)
+### Routers
 
 ---
 
