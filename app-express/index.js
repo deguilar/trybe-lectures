@@ -1,38 +1,37 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const fs = require('fs').promises;
+const userRouter = require('./userRouter');
+const booksRouter = require('./booksRouter');
 
 const app = express();
 
 app.use(bodyParser.json());
 
-const books = [
-  { id: 1, title: 'The Lord of Rings', author: 'J.R.R. Tolkien' },
-  { id: 2, title: 'Dune', author: 'Frank Herbert' },
-  { id: 3, title: 'Foundation', author: 'Isaac Asimov' }, 
-];
+// lendo do arquivo json
+// app.get('/books', async (_req, res, next) => {
+// 	try {
+// 		const content = await fs.readFile('./book.json');
+// 		const books = JSON.parse(content);
+// 		res.status(200).json(books);
+// 	} catch (e) {
+// 		console.log('Tratando no middleware específico!');
+// 		// res.status(400).json({ message: e.message });
 
-app.get('/books', (_req, res) => {
-  res.status(200).json(books);
-});
+// 		next(e.message);
+// 	}
 
-app.post('/books', (req, res) => {
-  const { id, title, author } = req.body;
+// 	// res.status(200).json(books);
+// });
 
-  books.push({ id, title, author });
+// lendo direto da array
 
-  res.status(200).json({ ok: true });
-});
+app.use('/users', userRouter);
+app.use('/books', booksRouter);
 
-app.put('/books/:id', (req, res) => {
-  const { id } = req.params;
-  const { title, author } = req.body;
-  const bookId = books.findIndex((b) => b.id === +id);
-
-  if (bookId === -1) return res.status(404).json({ message: 'Book not found!' });
-
-  books[bookId] = { id, title, author };
-
-  res.status(200).json({ id, title, author });
+app.use((err, _req, res, _next) => {
+  console.log('⚠️ Passou pelo middleware genérico!');
+  res.status(400).json({ message: err });
 });
 
 app.listen(3001, () => console.log('🚀 here we go!'));
