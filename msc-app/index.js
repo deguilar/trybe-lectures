@@ -1,15 +1,20 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
+const songController = require('./controllers/songController');
+
 const app = express();
 app.use(bodyParser.json());
 
-const HTTP_OK_STATUS = 200;
-const PORT = '3000';
+const PORT = '3001';
 
-app.get('/', (_request, response) => {
-  response.status(HTTP_OK_STATUS).send();
-});
+app.get('/songs', songController.getAll);
+
+app.get('/songs/:id', songController.getById);
+
+app.post('/songs', songController.create);
+
+app.delete('/songs/:id', songController.remove);
 
 app.listen(PORT, () => {
   console.log('🚀 Segura que nossa app tá rodando!');
