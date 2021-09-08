@@ -1,4 +1,4 @@
-# Repositório de Plantão Invertido Node.js da Turma 10-A (TryB-X :green_heart:) :book: :rocket:
+# Repositório de Plantão Invertido Node.js da Turma 10-A :book: :rocket:
 
 Este repositório é dedicado a exercícios complementares fora do conteúdo do course e das aulas ao vivo #VQV :smile:
 
