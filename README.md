@@ -24,3 +24,16 @@ na construção :wink: :smile:
 
 Dentro da pasta **08-09-2021** existe outro `README.md` com mais informações, leia, olhe os arquivos e
 comece a caça aos bugs :bow_and_arrow: :thinking: :eyes:
+
+#### Desafio 2: Refactoring... - 09/09/2021
+
+> Data 09/09/2021
+
+Para hoje precisamos remover a persistência em **array** (arquivo `database.js`), implementar nossas camadas (`model`, `service` e `controller`) e assim fazer um
+*refactoring* em nossa aplicação. Após a implementação da conexão com o **MongoDB**:
+
+- :heavy_check_mark: Refatore a funcionalidade de **cadastrar** novas pessoas (Agora usando o MongoDB);
+- :heavy_check_mark: Refatore a funcionalidade de **listar** todas as pessoas da base de dados (Agora usando o MongoDB);
+- :heavy_check_mark: Transfira as validações dos *middlewares* para o *service* e aplique a arquitetura `MSC` na aplicação;
+
+Dentro da pasta **09-09-2021** existe um readme e o código atualizado do nosso último dia de trabalho duro, bora começar nosso refactoring :rocket:
