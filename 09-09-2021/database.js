@@ -5,11 +5,11 @@ module.exports = [
   },
   {
     id: 2,
-    name: 'Neto'
+    name: 'Paulo'
   },
   {
     id: 3,
-    name: 'John'
+    name: 'Kissyla'
   },
   {
     id: 4,
@@ -17,14 +17,14 @@ module.exports = [
   },
   {
     id: 5,
-    name: 'Moreira'
+    name: 'Gabriel'
   },
   {
     id: 6,
-    name: 'Raissa'
+    name: 'Cristiano'
   },
   {
     id: 7,
-    name: 'Cyrillo'
+    name: 'Renato'
   },
 ];
