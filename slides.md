@@ -7,112 +7,49 @@ enableSearch: false
 enableChalkboard: false
 ---
 
-### Boas práticas em APIs
+### Testes de Unidade \o/
 
-![Node](https://okli.in/wp-content/uploads/2021/04/resticon-removebg-preview.png){width=40%}
-
----
-
-### O que teremos Hoje
-
-- **Rest**
-- **Rest vs. Restful**
-- **Status Code**
+![Node](https://miro.medium.com/max/1024/1*Y07KF-_laqG2cJ1Squ0Bag.png)
 
 ---
 
-### Objetivo do REST
+### O que vai rolar hoje?
 
-- **PADRONIZAR CONSTRUÇÃO DE APIS**
-- **Reduzir o tempo de aprendizado de uma pessoa ao usar API**
-
----
-
-### REST VS. RESTFUL
-
-Uma API Restful é uma API que segue o padrão REST.
+- **Testes no Model**
+- **Testes no Service**
+- **Testes no Controller**
+- **Testes no ❤️**
+- **E com o nosso amado TDD 💚**
 
 ---
 
-#### O que precisa para ser RESTFUL?
+#### Sequência do course
 
-- Usar os status de retornos e os Verbos HTTP Corretos
-
----
-
-#### O que precisa para ser RESTFUL?
-
-![Verbos](./images/verbos.png)
+![Movies](https://media2.giphy.com/media/AuZXGzk5qKRpG54Ewl/giphy.gif?cid=ecf05e47kwbl4eh769cqv4hnucww0j4cajk9wbghbs70mcki&rid=giphy.gif&ct=s)
 
 ---
 
-#### O que precisa para ser RESTFUL?
+### Let's Test!
 
-- Usar os status de retornos e os Verbos HTTP Corretos
-- Separação entre Cliente e servidor
-
----
-
-#### O que precisa para ser RESTFUL?
-
-![Cliente Servidor](./images/rest-api.png){width=70%}
+![Test](https://poster.keepcalmandposters.com/default/6210210_keep_calm_and_lets_test_it.png){width=40%}
 
 ---
 
-#### O que precisa para ser RESTFUL?
+### Dubles
 
-- Usar os status de retornos e os Verbos HTTP Corretos
-- Separação entre Cliente e servidor
-- Não tem estado entre as comunicações
-  (cada endpoint é autossuficiente)
+![duble](https://stuffzentretenimento.files.wordpress.com/2015/08/mi.gif)
 
 ---
 
-#### O que precisa para ser RESTFUL?
+#### Preparar os dublês de teste
 
-- Usar os status de retornos e os Verbos HTTP Corretos
-- Separação entre Cliente e servidor
-- Não tem estado entre as comunicações
-  (cada endpoint é autossuficiente)
-- Ter a ideia de recursos
+![before-after](./images/before-after-explicacao.png)
 
 ---
 
-### Recurso?
+#### Como o duble trabalha?
 
-![Resource](./images/resources.png)
-
----
-
-### Recurso
-
-![Resource](./images/resource-route.png)
-
----
-
-### Bora para o código
-
-![Person](./images/person.png){width=52%}
-
----
-
-![HTTP Status](https://www.xeonbd.com/assets/uploads/2021/02/http-status-codes-1024x892.jpg){width=65%}
-
-###### Imagem do site - xeonbd.com
-
----
-
-### HTTP Status Code
-
-![HTTP Status](https://www.erudio.com.br/blog/wp-content/uploads/2015/12/HTTP_StatusCodes_By_Group-1024x497.png)
-
-###### Imagem do site - erudio.com.br
-
----
-
-#### Mais usados
-
-![HTTP Status](./images/statusCode.png){width=44%}
+![stub](./images/MongoMemoryServer.png){width=95%}
 
 ---
 
