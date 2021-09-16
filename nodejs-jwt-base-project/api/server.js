@@ -4,13 +4,15 @@ const postsController = require('../controllers/postsController');
 const usersController = require('../controllers/usersController');
 const loginController = require('../controllers/loginController');
 
+const authMiddleware = require('../middlewares/authMiddleware');
+
 const PORT = process.env.PORT || 3001;
 
 const app = express();
 
 app.use(bodyParser.json());
 
-app.get('/api/posts', postsController);
+app.get('/api/posts', authMiddleware, postsController);
 app.post('/api/users', usersController);
 app.post('/api/login', loginController);
 

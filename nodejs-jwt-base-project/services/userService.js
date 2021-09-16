@@ -1,4 +1,7 @@
 const userModel = require('../models/userModel');
+const jwt = require('jsonwebtoken');
+
+const SECRET = 'meusupersegredo';
 
 const findByCredentials = async (username, password) => {
   if (!username || !password) return (
@@ -11,7 +14,14 @@ const findByCredentials = async (username, password) => {
     { status: 401, message: 'Usuário não existe ou senha inválida' }
   );
 
-  return ({ status: 200, message: 'Login efetuado com sucesso' })
+  const { password: _, ...userPayload } = userSearch;
+
+  const token = jwt.sign(userPayload, SECRET, {
+    algorithm: 'HS256',
+    expiresIn: '15d15m'
+  });
+
+  return ({ status: 200, message: 'Login efetuado com sucesso', token })
 };
 
 const create = async (username, password) => {

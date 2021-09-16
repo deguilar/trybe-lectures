@@ -17,7 +17,6 @@ enableChalkboard: false
 
 - Segurança 💚
 - JWT
-- Como armazenar senhas de forma segura
 
 ---
 
