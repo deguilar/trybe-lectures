@@ -7,82 +7,156 @@ enableSearch: false
 enableChalkboard: false
 ---
 
-#### Deploy - Heroku
-
-![Heroku](https://miro.medium.com/max/4320/1*RpcwelDN22hysIviXiW95w.png){width=80%}
+### 29.2 - Gerenciadores de Processos
 
 ---
 
-### O que é deploy? 📦
+### O que vamos aprender?
 
-![-](https://images.ctfassets.net/n7sl5aymm8j1/4mQaDMqLGwnWjh1eKTjzRc/26ad864432b097024265ea54fd47a4a1/hero-deploy-page.png){width=60%}
-
----
-
-### E onde podemos fazer esses Deploys❓
-
----
-
-![-](./images/cloud.png){width=70%}
+* O que são gerenciadores de processo;
+* Como utilizar o pm2 como gerenciados de processo;
+* Principais funções do pm2: `start`, `stop`, `restart`, `delete`, `ls`;
+* Tratamento de erros com pm2;
+* Modo cluster;
 
 ---
 
-![-](./images/Cloud-Delivery-Models.png)
+### O que são?
+
+Softwares criados para facilitar e tornar mais eficaz o gerenciamento de processos
 
 ---
 
-![-](./images/diferencas.png){width=80%}
+### Vantagens
+
+- Maior robustez para as aplicações gerenciadas
+- Melhor aproveitamento de recursos
+- Monitoramento de aplicações
+- Mecanismo de _fail safe_
+- Captura de logs
 
 ---
 
-#### Nosso foco hoje é no Heroku(PaaS)
-
-![-](https://www3.assets.heroku.com/assets/home/hero/apps-1cbc7cbe49e12ad3cfb038f1b21942c2c4773ed159e422c1c10e5d2257fbdd80.png)
+### PM2
 
 ---
 
-#### Remotes - GIT
+### Vantagens
 
-![-](./images/remote.png){width=85%}
-
----
-
-### Variáveis de ambiente
-
-![-](./images/env-start.png)
-
----
-
-### Variáveis de ambiente
-
-![-](./images/env-desenho.png)
+- Suporte nativo a Node.JS
+- Modo Cluster
+- Interface de gerenciamento online
+- Gerenciamento de logs
+- Monitoramento de arquivos
+- Integração com o Docker
+- PM mais utilizado no mercado
 
 ---
 
-### Variáveis de ambiente
+### Utilizando
 
-![-](./images/variaveis-de-ambiente.png)
-
----
-
-### Variáveis de ambiente
-
-![-](./images/heroku-variaveis.png)
+```shell
+pm2 start index.js --watch --name colorful-process
+```
 
 ---
 
-#### Multi-ambientes
+### Hora da Demo! 💻
 
-![-](./images/remotes-mult.png)
-
----
-
-#### Remotes - GIT
-
-![-](./images/remote-detalhado.png){width=75%}
+Show me the code!
 
 ---
 
-### Dúvidas?
+### Tratamento de erros
 
-![alt](https://media3.giphy.com/media/3o6MbudLhIoFwrkTQY/giphy.gif?cid=790b76117789c6161150915091725a365bdeac4e06fd01cd&rid=giphy.gif&ct=g){ width=90% }
+- Reinicia os processos automaticamente
+- Uma das grandes vantagens de um gerenciador de processos
+- Garante que uma aplicação não fique fora do ar por muito tempo
+
+---
+
+### Vamos ver funcionando 🔍
+
+Criando um endpoint de "bug" 🐛
+
+---
+
+## Arquivo ecosystem
+
+Armazenando as configurações dos apps 💾
+
+---
+
+### Arquivo ecosystem
+
+
+Permite definir as configurações de um ou mais apps para que sejam iniciados já com tudo pronto.
+
+---
+
+#### Exemplo
+
+```yaml
+apps:
+  - name: colorful-process
+    script: ./index.js
+    watch: true
+```
+
+---
+
+#### Executando
+
+```shell
+pm2 start ecosystem.config.yml
+```
+
+---
+
+### Lets code!
+
+E lá vamos nós! 🧹
+
+---
+
+### Modo Cluster
+
+Aproveitando todo o poder do servidor 🔥
+
+---
+
+### Pra que serve?
+
+- Utilização máxima dos recursos do servidor
+- Distribuir a carga entre mais de um processo
+- 0 tempo de downtime em caso de erro
+
+---
+
+### Visualizando
+
+![](images/modo-cluster.png)
+
+---
+
+### Na prática
+
+```yaml
+# apps:
+#   - name: colorful-process
+#     script: ./index.js
+#     watch: true
+exec_mode: cluster
+instances: max
+```
+
+---
+
+### Show time
+
+`🟡 🔵 🟢 🔴 colorful_process 🔴 🟢 🔵 🟡`
+
+
+---
+
+# Fim!
