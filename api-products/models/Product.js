@@ -4,5 +4,9 @@ module.exports = (sequelize, DataTypes) => {
     description: DataTypes.STRING
   });
 
+ Product.associate = (models) => {
+   Product.belongsTo(models.User, { as: 'user', foreignKey: 'userId' })
+ }
+
   return Product;
 }

@@ -1,4 +1,4 @@
-const { Product } = require('../models');
+const { Product, User } = require('../models');
 
 const getAll = (req, res, next) => {
   Product.findAll()
@@ -12,7 +12,9 @@ const getAll = (req, res, next) => {
 };
 
 const getById = (req, res) => {
-  Product.findByPk(req.params.id)
+  Product.findByPk(req.params.id, { 
+    include: { model: User, as: 'user', attributes: { exclude: ['password'] } } 
+  })
     .then((product) => {
       if (product === null) {
         return res.status(404).send({ message: 'Usuário não encontrado' });
