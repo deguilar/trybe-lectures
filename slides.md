@@ -96,7 +96,7 @@ Structured Query Language, ou Linguagem de Consulta Estruturada
 
 ### CRUD
 
-![crud](./images/crud.jpeg){ width=70% }
+![crud](./images/CRUD.jpeg){ width=70% }
 
 ---
 
