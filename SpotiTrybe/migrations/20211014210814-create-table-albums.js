@@ -2,7 +2,7 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('albums', { 
+    await queryInterface.createTable('Albums', { 
       id: {
       type: Sequelize.INTEGER,
       primaryKey: true,
