@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "root",
-    "password": "sqllpm001",
+    "username": "vaca",
+    "password": "pkx22lm4",
     "database": "spoty-trybe",
     "host": "127.0.0.1",
     "dialect": "mysql"

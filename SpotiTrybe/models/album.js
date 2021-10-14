@@ -4,5 +4,11 @@ module.exports = (sequelize, DataTypes) => {
     releaseDate: DataTypes.DATE,
     artistId: DataTypes.INTEGER
   });
+
+  Album.associate = (models) => {
+    Album.belongsTo(models.Artist, {
+      foreignKey: 'artistId', as: 'artist'
+    })
+  }
   return Album;
 };
