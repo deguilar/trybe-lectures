@@ -16,3 +16,4 @@ app.post('/songs', songController.createMusic);
 app.post('/albums', albumController.createAlbum);
 app.get('/artists/:id', artistController.getById);
 app.get('/albums/:id', albumController.getAlbum)
+app.put('/albums/:id/addSongs', albumController.addSongs)
