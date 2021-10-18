@@ -11,11 +11,13 @@ const createAlbum = async (req, res, next) => {
 const getAlbum = async (req, res, next) => {
   const { id } = req.params;
 
-  const getById = await Album.findByPk(id, {
-    include: { model: Artist, as: 'artist', attributes: { exclude: ['createdAt','updatedAt']}}
-  });
+  const album = await Album.findByPk(id);
 
-  return res.status(200).json({getById})
+  const artist = await album.getArtist()
+  
+  // const artist = await Artist.findByPk(album.id)
+
+  return res.status(200).json({...album.dataValues, artist})
 }
 
 module.exports = {
