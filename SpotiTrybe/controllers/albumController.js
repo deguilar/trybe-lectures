@@ -1,4 +1,4 @@
-const { Album, Artist, SongAlbum, Song } = require('../models');
+const { Album, Song, Artist, SongAlbum } = require('../models');
 
 const createAlbum = async (req, res, next) => {
   const { title, releaseDate, artistId } = req.body;
@@ -8,6 +8,22 @@ const createAlbum = async (req, res, next) => {
   res.status(201).json({message: 'cadastrado com sucesso'});
 }
 
+// EAGER LOADING
+const getAlbum = async (req, res, next) => {
+  const { id } = req.params;
+
+  const album = await Album.findByPk(id, {
+    include: [
+      { model: Artist, as: 'artist' },
+      { model: Song, as: 'songs' }
+    ]
+  });
+
+  return res.status(200).json(album)
+}
+
+/* LAZY LOADING
+
 const getAlbum = async (req, res, next) => {
   const { id } = req.params;
 
@@ -15,10 +31,10 @@ const getAlbum = async (req, res, next) => {
 
   const artist = await album.getArtist()
   
-  // const artist = await Artist.findByPk(album.id)
+  const songs = await album.getSongs()
 
-  return res.status(200).json({...album.dataValues, artist})
-}
+  return res.status(200).json({...album.dataValues, artist, songs})
+} */
 
 const addSongs = async (req, res, next) => {
   const { id } = req.params;
