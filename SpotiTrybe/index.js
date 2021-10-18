@@ -5,6 +5,7 @@ const port = 3000
 
 const songController = require('./controllers/songController');
 const albumController = require('./controllers/albumController');
+const artistController = require('./controllers/artistController');
 
 app.use(bodyParser.json());
 
@@ -13,3 +14,4 @@ app.listen(port, () => console.log(`Example app listening on port port!`))
 
 app.post('/songs', songController.createMusic);
 app.post('/albums', albumController.createAlbum);
+app.get('/artists/:id', artistController.getById);
