@@ -15,8 +15,6 @@ const getAlbum = async (req, res, next) => {
     include: { model: Artist, as: 'artist', attributes: { exclude: ['createdAt','updatedAt']}}
   });
 
-  console.log(getById)
-
   return res.status(200).json({getById})
 }
 
