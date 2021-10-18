@@ -4,5 +4,11 @@ module.exports = (sequelize, DataTypes) => {
     country: DataTypes.STRING,
     genre: DataTypes.STRING,
   });
+
+  Artist.associate = (models) => {
+    Artist.hasMany(models.Albums, {
+      foreignKey: 'artistId', as: 'albums'
+    });
+  }
   return Artist;
 };
