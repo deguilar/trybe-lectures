@@ -1,38 +1,31 @@
-const Cats = require('../models/catModel');
+const catsService = require('../services/catsService');
 
 const listCats = async (req, res) => {
-  const cats = await Cats.getAll();
+  const result = await catsService.getAll();
   
-  if (!cats) {
-    return res.status(404).json({ message: 'Gatos não encontrados' });
-  }
+  if (result.isError) return res.status(404).json({ message: result.message });
   
-  res.status(200).json(cats);
+  res.status(200).json(result);
 };
 
 const catDetails = async (req, res) => {
   const { id } = req.params;
 
-  const cat = await Cats.getCatById(id);
-  console.log(cat);
+  const result = await catsService.getById(id);
+  
+  if (result.isError) return res.status(404).json({ message: result.message });
 
-  if (!cat) {
-    return res.status(404).json({ message: 'Não encontrado' });
-  }
-
-  res.status(200).json(cat);
+  res.status(200).json(result);
 };
 
 const newCat = async (req, res) => {
   const { name, age } = req.body;
 
-  if (!Cats.isValid(name, age)) {
-    return res.status(400).json({ message: 'O nome ou idade digitados não são válidos' });
-  }
+  const result = await catsService.create(name, age);
 
-  await Cats.create(name, age);
+  if (result.isError) return res.status(400).json({ message: result.message})
 
-  res.status(200).json({ message: 'Cadastrado com sucesso!'});
+  res.status(201).json({ message: result.message });
 };
 
 module.exports = {
