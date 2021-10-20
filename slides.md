@@ -27,7 +27,19 @@ enableChalkboard: false
 
 ### IF / CASE
 
+> E se?
+
 ---
+
+#### Descubra se uma pessoa é maior de idade
+
+```sql
+SET @age = 14;
+SELECT IF(@age < 18, 'Di maior', 'Di menor');
+```
+
+---
+
 
 ### Strings
 
@@ -45,9 +57,9 @@ enableChalkboard: false
 
 ![math](https://media0.giphy.com/media/XCfBFvZcs5lsc/giphy.gif?cid=ecf05e474h0yagtbytce4ka5p6ga3mpmf3j3mdh7ezftnu89&rid=giphy.gif&ct=g){ width=50% }
 
---- 
+---
 
-* DIV 
+* DIV
 * MOD
 * ROUND
 * CEIL
@@ -55,6 +67,41 @@ enableChalkboard: false
 * POW
 * SQRT
 * RAND
+
+---
+
+### Operadores aritméticos
+> Calculando ...
+
+```sql
+SELECT 10 + 10;
+
+SELECT 10 - 10;
+
+SELECT 10 * 10;
+
+SELECT 10 / 10;
+```
+
+---
+
+### Outros operadores
+
+```sql
+SELECT 20 DIV 3; -- retona o número inteiro da divisão
+
+SELECT 18 MOD 3; -- retorna o resto de uma divisão inteira
+
+SELECT ROUND(20.49, 1); -- permite arredondar um valor
+
+SELECT CEIL(20.51); -- arredonda para o número inteiro (cima)
+
+SELECT FLOOR(10.51); -- arredonda para o número inteiro (baixo)
+
+SELECT POW(2, 5); -- potenciação onde temos X elevado a Y.
+
+SELECT SQRT(16); -- retorna a raiz quadrada
+```
 
 ---
 
@@ -71,7 +118,40 @@ enableChalkboard: false
 
 ---
 
+#### Diferença entre datas
+
+```sql
+SELECT DATEDIFF('2020-05-01', '2020-05-31');
+SELECT DATEDIFF(return_date, rental_date) FROM sakila.rental;
+```
+
+---
+
+#### Diferença de tempo
+
+```sql
+SELECT TIMEDIFF('05:15:30', '06:15:30');
+SELECT TIMEDIFF('05:15:30', '05:12:30');
+SELECT TIMEDIFF(return_date, rental_date) FROM sakila.rental;
+```
+
+---
+
+#### Extraindo uma parte expecifica da data
+```sql
+
+SELECT return_date, DATE(return_date) FROM sakila.rental;
+
+SELECT return_date, MINUTE(return_date) FROM sakila.rental; 
+
+```
+
+---
+
+
 ### Funções de Agregação
+
+> Geralmente utilizados em relatórios e gráficos
 
 ![Charts](https://media3.giphy.com/media/l2JdTgYZ7VG4EeBVe/giphy.gif?cid=ecf05e47grphvs3htwqv9jmpppowd1jnt6h19frnhy9s4fds&rid=giphy.gif&ct=g){ width=50% }
 
@@ -79,21 +159,41 @@ enableChalkboard: false
 
 ![Charts](./images/min.png){ width=90% }
 
+```sql
+SELECT MIN(rental_duration) FROM sakila.film;
+```
+
 ---
 
 ![Charts](./images/max.png){ width=90% }
+
+```sql
+SELECT MAX(rental_duration) FROM sakila.film;
+```
 
 ---
 
 ![Charts](./images/avg.png){ width=90% }
 
+```sql
+SELECT AVG(rental_duration) FROM sakila.film;
+```
+
 ---
 
 ![Charts](./images/sum.png){ width=90% }
 
+```sql
+SELECT SUM(rental_duration) FROM sakila.film;
+```
+
 ---
 
 ![Charts](./images/count.png){ width=90% }
+
+```sql
+SELECT COUNT(rental_duration) FROM sakila.film;
+```
 
 ---
 
