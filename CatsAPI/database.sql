@@ -1,3 +1,5 @@
+DROP DATABASE IF EXISTS cats_api;
+
 CREATE DATABASE IF NOT EXISTS cats_api;
 
 USE cats_api;
@@ -8,3 +10,5 @@ CREATE TABLE cats (
     age INT NOT NULL,
     CONSTRAINT pk_cats PRIMARY KEY (id)
 );
+
+SELECT * FROM cats;
