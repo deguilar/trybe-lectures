@@ -7,79 +7,71 @@ enableSearch: false
 enableChalkboard: false
 ---
 
-#### Deploy - Heroku
-
-![Heroku](https://miro.medium.com/max/4320/1*RpcwelDN22hysIviXiW95w.png){width=80%}
+# TCP/UDP & NET
 
 ---
 
-### O que é deploy? 📦
+### Sockets
 
-![-](https://images.ctfassets.net/n7sl5aymm8j1/4mQaDMqLGwnWjh1eKTjzRc/26ad864432b097024265ea54fd47a4a1/hero-deploy-page.png){width=60%}
-
----
-
-### E onde podemos fazer esses Deploys❓
+> "Um Socket é um ponto final (endpoint) de um canal bidirecional de comunicação entre dois programas rodando em uma rede;"
 
 ---
 
-![-](./images/cloud.png){width=70%}
+![](images/sockets.png)
 
 ---
 
-![-](./images/Cloud-Delivery-Models.png)
+### TCP/UDP
+
+* TCP e UDP são protocolos da camada 4 do Modelo OSI
+* 65.536 portas TCP disponíveis
+* 65.536 portas UDP disponíveis
 
 ---
 
-![-](./images/diferencas.png){width=80%}
+![](images/udp-tcp-joke.jpeg)
 
 ---
 
-#### Nosso foco hoje é no Heroku(PaaS)
+### TCP
 
-![-](https://www3.assets.heroku.com/assets/home/hero/apps-1cbc7cbe49e12ad3cfb038f1b21942c2c4773ed159e422c1c10e5d2257fbdd80.png)
-
----
-
-#### Remotes - GIT
-
-![-](./images/remote.png){width=85%}
+* Three Way Handshake (SYN, SYN-ACK, ACK)
+* Verificação de integridade
+* Reenvio de pacotes
 
 ---
 
-### Variáveis de ambiente
+### UDP
 
-![-](./images/env-start.png)
-
----
-
-### Variáveis de ambiente
-
-![-](./images/env-desenho.png)
+* Não garante a entrega
+* Simplesmente envia o dado
+* Ex: Pen Drives
 
 ---
 
-### Variáveis de ambiente
+### Pronto ou não aí vai um pacote! 
 
-![-](./images/variaveis-de-ambiente.png)
-
----
-
-### Variáveis de ambiente
-
-![-](./images/heroku-variaveis.png)
+[Gif](https://media.giphy.com/media/R56D9r7oGPx96/giphy.gif)
 
 ---
 
-#### Multi-ambientes
+### Sockets TCP
 
-![-](./images/remotes-mult.png)
+* IP define a máquina.  
+* Porta especifica a aplicação.
+* Servidor fica em loop esperando requisições esperando conexões de clientes para gerar "sockets".
 
 ---
 
-#### Remotes - GIT
+### Construindo um chat
 
-![-](./images/remote-detalhado.png){width=75%}
+![](images/chat.png)
+
+---
+
+### Chat
+
+Let`s code!
 
 ---
 
