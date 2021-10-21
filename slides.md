@@ -1,7 +1,7 @@
 ---
 theme: "night"
 transition: "slide"
-title: "Deploy"
+title: "TCP/UDP e NET"
 enableMenu: false
 enableSearch: false
 enableChalkboard: false
@@ -51,7 +51,7 @@ enableChalkboard: false
 
 ### Pronto ou não aí vai um pacote! 
 
-[Gif](https://media.giphy.com/media/R56D9r7oGPx96/giphy.gif)
+![Gif](https://media.giphy.com/media/R56D9r7oGPx96/giphy.gif)
 
 ---
 
@@ -59,7 +59,7 @@ enableChalkboard: false
 
 * IP define a máquina.  
 * Porta especifica a aplicação.
-* Servidor fica em loop esperando requisições esperando conexões de clientes para gerar "sockets".
+* Servidor fica em loop esperando requisições para gerar "sockets".
 
 ---
 
