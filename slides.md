@@ -1,88 +1,69 @@
 ---
 theme: "night"
 transition: "slide"
-title: "Deploy"
+title: "Socket.io"
 enableMenu: false
 enableSearch: false
 enableChalkboard: false
 ---
 
-#### Deploy - Heroku
-
-![Heroku](https://miro.medium.com/max/4320/1*RpcwelDN22hysIviXiW95w.png){width=80%}
+# Socket.io
 
 ---
 
-### O que é deploy? 📦
+### Setup do Socket.io 
 
-![-](https://images.ctfassets.net/n7sl5aymm8j1/4mQaDMqLGwnWjh1eKTjzRc/26ad864432b097024265ea54fd47a4a1/hero-deploy-page.png){width=60%}
+```js
+const socketIoServer = require('http').createServer();
+const io = require('socket.io')(socketIoServer, {
+  cors: { // Aqui existe um objeto de configuração, essas options são necessárias a partir da major 3 do socket.io 
+    origin: `http://localhost:${PORT}`, // origem permitida
+    methods: ['GET', 'POST'], // métodos permitidos
+  },
+});
+```
 
----
-
-### E onde podemos fazer esses Deploys❓
-
----
-
-![-](./images/cloud.png){width=70%}
-
----
-
-![-](./images/Cloud-Delivery-Models.png)
 
 ---
 
-![-](./images/diferencas.png){width=80%}
+### Quadro de notícias
+
+![](./images/QuadroDeNoticias.png)
 
 ---
 
-#### Nosso foco hoje é no Heroku(PaaS)
+### Implementando
 
-![-](https://www3.assets.heroku.com/assets/home/hero/apps-1cbc7cbe49e12ad3cfb038f1b21942c2c4773ed159e422c1c10e5d2257fbdd80.png)
-
----
-
-#### Remotes - GIT
-
-![-](./images/remote.png){width=85%}
+Let`s code!
 
 ---
 
-### Variáveis de ambiente
-
-![-](./images/env-start.png)
+### E se precisarmos ao recarregar a página mostrar a lista de notícias já cadastradas?
 
 ---
 
-### Variáveis de ambiente
+### SSR
 
-![-](./images/env-desenho.png)
-
----
-
-### Variáveis de ambiente
-
-![-](./images/variaveis-de-ambiente.png)
+![](./images/ssr.png)
 
 ---
 
-### Variáveis de ambiente
+### CSR
 
-![-](./images/heroku-variaveis.png)
+Client-Side Rendering (Socket.io)
 
----
-
-#### Multi-ambientes
-
-![-](./images/remotes-mult.png)
+![](./images/csr1.png)
 
 ---
 
-#### Remotes - GIT
+### CSR
 
-![-](./images/remote-detalhado.png){width=75%}
+Client-Side Rendering (Socket.io)
+
+![](./images/csr2.png)
 
 ---
 
-### Dúvidas?
+### Isso é tudo pessoal
 
-![alt](https://media3.giphy.com/media/3o6MbudLhIoFwrkTQY/giphy.gif?cid=790b76117789c6161150915091725a365bdeac4e06fd01cd&rid=giphy.gif&ct=g){ width=90% }
+Sextou!
