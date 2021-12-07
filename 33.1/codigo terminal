@@ -1,0 +1,37 @@
+
+>>> class Cachorros:
+	cobertura='pelos'
+	alimento='carne'
+	patas=4
+	habitat='domestico'
+	nome='Rex'
+
+>>> class Galinhas:
+	cobertura='penas'
+	alimento='graos'
+	patas=2
+	habitat='domestico'
+	bico='pequeno'
+
+>>> dir(Cachorros)
+
+>>> dir(Galinhas)
+
+>>> Snoopy=Cachorros()
+
+>>> Lala=Galinhas()
+
+>>> Snoopy.alimento
+'carne'
+
+>>> Lala.alimento
+'graos'
+
+>>> Lala.bico
+'pequeno'
+
+>>> Snoopy.bico
+AttributeError: Cachorros instance has no attribute 'bico'
+
+>>> print '%s late sem parar!' % Snoopy.nome
+Rex late sem parar!
