@@ -1,0 +1,25 @@
+version: '3.6'
+services:
+  web:
+    build: .
+    volumes:
+      - .:/projetos
+    command: flask run --host=0.0.0.0
+    ports:
+      - 5000:5000
+    links:
+      - db
+    environment:
+      - FLASK_APP=app.py
+      - FLASK_ENV=development
+      - TEMPLATES_AUTO_RELOAD=True
+      - PYTHONUNBUFFERED=1
+  db:
+    image: mongo
+    volumes:
+      - data:/data
+    ports:
+      - 27017:27017
+volumes:
+  data:
+  

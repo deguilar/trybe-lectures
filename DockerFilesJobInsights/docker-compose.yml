@@ -1,0 +1,11 @@
+version: '3.6'
+
+services:
+  web:
+    build: . 
+    volumes:
+        - .:/projeto
+    environment:
+      - FLASK_ENV=development
+    ports:
+      - 5000:5000
